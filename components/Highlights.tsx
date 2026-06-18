@@ -37,7 +37,7 @@ const highlights = [
 
 export default function Highlights() {
   return (
-    <section className="flex flex-col w-full bg-[#0D0D0D] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px] relative z-10">
       <SectionHeader
         label="KEY HIGHLIGHTS"
         title={"WHY QPSI\nMATTERS."}
@@ -47,12 +47,8 @@ export default function Highlights() {
         {highlights.map((h, i) => (
           <div
             key={h.title}
-            className={`flex flex-col gap-4 p-6 md:p-[32px] border border-[#2D2D2D] ${
-              i === 0
-                ? "bg-[#111111] border-l-2 border-l-[#A855F7]"
-                : i === highlights.length - 1
-                ? "bg-[#111111] border-r-2 border-r-[#7C3AED]"
-                : "bg-[#0F0F0F]"
+            className={`flex flex-col gap-6 p-8 md:p-[40px] w-full border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors ${
+              i === 0 ? "border-white/[0.08]" : "border-white/[0.08]"
             }`}
           >
             <span

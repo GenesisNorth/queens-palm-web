@@ -2,7 +2,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function AboutPreview() {
   return (
-    <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px] relative z-10">
       <SectionHeader
         label="ABOUT US"
         title={"DISCOVER MORE ABOUT\nWHO WE ARE."}
@@ -11,7 +11,7 @@ export default function AboutPreview() {
 
       <div className="flex flex-col md:flex-row w-full gap-[2px]">
         {/* About body */}
-        <div className="flex flex-col gap-6 p-8 md:p-[40px] bg-[#111111] border border-[#2D2D2D] w-full md:flex-1">
+        <div className="flex flex-col gap-6 p-8 md:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full md:flex-1 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
           <p className="font-ibm-mono text-[12px] md:text-[13px] text-[#AAAAAA] tracking-[0.5px] leading-[1.8]">
             We take this a step further by empowering young people, regardless of
             background, with essential soft skills that are critical for success in
@@ -32,7 +32,7 @@ export default function AboutPreview() {
         </div>
 
         {/* Mission */}
-        <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#0F0F0F] border-2 border-[#7C3AED] w-full md:flex-1">
+        <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full md:flex-1 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
           <span className="font-ibm-mono text-[11px] font-bold text-[#7C3AED] tracking-[2px]">
             OUR MISSION
           </span>

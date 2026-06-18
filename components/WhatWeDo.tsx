@@ -26,7 +26,7 @@ const cards = [
 
 export default function WhatWeDo() {
   return (
-    <section className="flex flex-col w-full bg-[#0D0D0D] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px] relative z-10">
       <SectionHeader
         label="WHAT WE DO"
         title={"BUILDING FUTURES.\nONE SKILL AT A TIME."}
@@ -36,8 +36,8 @@ export default function WhatWeDo() {
         {cards.map((card) => (
           <div
             key={card.tag}
-            className="flex flex-col gap-5 p-8 md:p-[32px] border w-full md:flex-1 md:h-[320px]"
-            style={{ backgroundColor: "#111111", borderColor: card.accent }}
+            className="flex flex-col gap-5 p-8 md:p-[32px] border border-white/[0.08] w-full md:flex-1 md:h-[320px] bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors"
+            style={{ borderTopColor: card.accent }}
           >
             <div
               className="w-[40px] h-[40px] shrink-0"

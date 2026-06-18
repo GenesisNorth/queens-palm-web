@@ -49,7 +49,7 @@ export default function Testimonials() {
   const visible = testimonials.slice(page * perPage, page * perPage + perPage);
 
   return (
-    <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px] relative z-10">
       <div className="flex items-end justify-between">
         <SectionHeader
           label="TESTIMONIALS"
@@ -77,11 +77,7 @@ export default function Testimonials() {
         {visible.map((t, i) => (
           <div
             key={t.name}
-            className="flex flex-col gap-6 p-8 md:p-[40px] border-l-4 w-full md:flex-1"
-            style={{
-              backgroundColor: i % 2 === 0 ? "#111111" : "#0D0D0D",
-              borderLeftColor: i % 2 === 0 ? "#A855F7" : "#7C3AED",
-            }}
+            className={`flex flex-col gap-6 p-8 md:p-[40px] shrink-0 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] w-full md:w-[600px] border-white/[0.08] transition-all duration-500`}
           >
             <p className="font-ibm-mono text-[13px] text-[#CCCCCC] tracking-[0.5px] leading-[1.7]">
               &ldquo;{t.quote}&rdquo;

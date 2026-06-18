@@ -12,9 +12,8 @@ interface PublicationCardProps {
 
 export default function PublicationCard({ title, excerpt, category, image, href }: PublicationCardProps) {
   return (
-    <div className="flex flex-col w-full bg-[#111111] border border-[#2D2D2D] hover:border-[#A855F7] transition-colors group h-full">
-      {/* Image container */}
-      <div className="relative w-full aspect-[16/9] bg-[#0A0A0A] overflow-hidden border-b border-[#2D2D2D]">
+    <div className="flex flex-col w-full bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] hover:border-[#A855F7] transition-colors group h-full shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+      <div className="relative w-full aspect-[16/9] bg-white/[0.01] overflow-hidden border-b border-white/[0.08]">
         <div className="absolute inset-0 opacity-10 flex items-center justify-center font-ibm-mono text-[#A855F7]">
           [COVER IMAGE]
         </div>

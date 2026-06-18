@@ -22,7 +22,7 @@ export default function MentorshipPage() {
           ensuring a mutually beneficial partnership that drives real-world results.
         </p>
         
-        <div className="flex flex-col gap-4 mt-4 p-6 bg-[#111111] border-l-2 border-l-[#A855F7]">
+        <div className="flex flex-col gap-4 mt-4 p-6 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border-l-4 border-l-[#A855F7]">
           <h4 className="font-grotesk text-[18px] font-bold text-[#F5F5F0]">The Mentorship Advantage:</h4>
           <ul className="flex flex-col gap-3">
             <li className="flex gap-3">

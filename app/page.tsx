@@ -9,7 +9,7 @@ import ClosingCTA from "@/components/ClosingCTA";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full bg-[#0A0A0A] pt-[96px]">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] relative z-10">
       <HeroSlider />
       <AboutPreview />
       <WhatWeDo />

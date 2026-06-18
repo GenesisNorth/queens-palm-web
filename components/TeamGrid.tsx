@@ -9,7 +9,7 @@ const placeholders = [
 
 export default function TeamGrid() {
   return (
-    <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px] relative z-10">
       <SectionHeader
         label="OUR TEAM"
         title={"VIEW ALL TEAM"}
@@ -18,8 +18,7 @@ export default function TeamGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
         {placeholders.map((member) => (
           <div key={member.id} className="flex flex-col gap-4">
-            {/* Photo placeholder */}
-            <div className="w-full aspect-[3/4] bg-[#111111] border border-[#2D2D2D] flex flex-col items-center justify-center gap-2">
+            <div className="w-full aspect-[3/4] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center justify-center gap-2">
               <span className="font-ibm-mono text-[10px] text-[#555] tracking-[2px]">
                 [TEAM PHOTO]
               </span>

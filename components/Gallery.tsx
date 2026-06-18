@@ -11,7 +11,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="flex flex-col w-full bg-[#050505] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px] relative z-10">
       <SectionHeader
         label="OUR GALLERY"
         title={"MOMENTS OF IMPACT."}
@@ -20,7 +20,7 @@ export default function Gallery() {
         {images.map((src, i) => (
           <div
             key={i}
-            className="group relative w-full aspect-[4/3] bg-[#111111] overflow-hidden border border-[#2D2D2D] hover:border-[#A855F7] transition-colors"
+            className="group relative w-full aspect-[4/3] bg-white/[0.02] backdrop-blur-lg overflow-hidden border border-white/[0.08] hover:border-[#A855F7] transition-colors shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
           >
             {/* Fallback pattern in case image doesn't load/exist yet */}
             <div className="absolute inset-0 opacity-10 flex items-center justify-center font-ibm-mono text-[#A855F7]">

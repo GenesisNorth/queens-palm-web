@@ -21,9 +21,9 @@ const pressLinks = [
 
 export default function PressPage() {
   return (
-    <main className="flex flex-col w-full bg-[#0A0A0A] pt-[96px] min-h-screen">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] min-h-screen relative z-10">
       {/* Hero */}
-      <section className="flex flex-col items-center w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] gap-8 border-b border-[#1D1D1D]">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:py-[100px] gap-8 border-b border-white/[0.08]">
         <div className="flex items-center justify-center gap-[8px] h-[32px] px-[16px] bg-[#A855F7]">
           <span className="font-ibm-mono text-[11px] font-bold text-white tracking-[2px]">
             <GlitchText text="[PRESS]" speed={30} />
@@ -38,7 +38,7 @@ export default function PressPage() {
       </section>
 
       {/* Press List */}
-      <section className="flex flex-col items-center w-full bg-[#050505] py-16 px-6 md:py-[100px] gap-12">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:py-[100px] gap-12">
         <div className="w-full max-w-[900px] flex flex-col gap-[2px]">
           {pressLinks.map((press) => (
             <a
@@ -46,7 +46,7 @@ export default function PressPage() {
               href={press.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 md:p-8 bg-[#111111] border border-[#2D2D2D] hover:border-[#A855F7] group transition-colors"
+              className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 md:p-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] hover:bg-white/[0.05] group transition-colors"
             >
               <div className="flex flex-col gap-2">
                 <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px] uppercase">

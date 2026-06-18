@@ -30,10 +30,10 @@ const programs = [
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col w-full bg-[#0A0A0A] pt-[96px]">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] relative z-10">
       
       {/* Intro Section */}
-      <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px]">
+      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px]">
         <SectionHeader
           label="ABOUT US"
           title={"SHARE THE JOY OF\nACHIEVING GLORIOUS\nMOMENTS."}
@@ -76,7 +76,7 @@ export default function AboutPage() {
       <Gallery />
 
       {/* Programs Preview Section */}
-      <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
+      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
         <SectionHeader
           label="PROGRAMS"
           title={"OUR INITIATIVES."}
@@ -84,7 +84,7 @@ export default function AboutPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
           {programs.map((prog, i) => (
-            <div key={prog.title} className="flex flex-col gap-6 p-8 md:p-[40px] bg-[#111111] border border-[#2D2D2D] hover:border-[#A855F7] transition-colors group">
+            <div key={prog.title} className="flex flex-col gap-6 p-8 md:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] transition-colors group">
               <div className="flex items-center justify-between">
                 <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
                   [0{i + 1}]
@@ -116,7 +116,7 @@ export default function AboutPage() {
       <TeamGrid />
 
       {/* CTA Section */}
-      <section className="flex flex-col items-center w-full bg-[#0A0A0A] py-16 px-6 md:p-[120px] gap-10 md:gap-[48px] border-t border-[#1D1D1D]">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:p-[120px] gap-10 md:gap-[48px] border-t border-white/[0.08]">
         <h2 className="font-grotesk text-[36px] md:text-[56px] font-bold text-[#F5F5F0] tracking-[-2px] leading-none text-center w-full max-w-[800px]">
           BRIGHT FUTURE THAT WE CHERISH. WE THRIVE FOR SUCCESS.
         </h2>

@@ -3,6 +3,13 @@
 @theme inline {
   --font-sans: var(--font-space-grotesk), "Space Grotesk", sans-serif;
   --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+
+  --animate-wave-flow: wave-flow 60s linear infinite;
+  
+  @keyframes wave-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 1200px -1200px; }
+  }
 }
 
 :root {

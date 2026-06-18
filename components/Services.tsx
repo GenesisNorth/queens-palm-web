@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
+    <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px] relative z-10">
       <SectionHeader
         label="OUR SERVICES"
         title={"OUR GOAL IS TO EMPOWER\nINDIVIDUALS TO JOIN\nTHE TOP 1% GLOBALLY."}
@@ -50,10 +50,10 @@ export default function Services() {
           {services.slice(0, 3).map((s, i) => (
             <div
               key={s.tag}
-              className={`flex flex-col gap-5 p-8 md:p-[40px] md:h-[280px] w-full md:flex-1 border ${
+              className={`flex flex-col gap-5 p-8 md:p-[40px] md:h-[280px] w-full md:flex-1 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors ${
                 i === 0
-                  ? "bg-[#111111] border-[#A855F7]"
-                  : "bg-[#0F0F0F] border-[#2D2D2D]"
+                  ? "border-white/[0.08] border-t-[#A855F7]"
+                  : "border-white/[0.08]"
               }`}
             >
               <span
@@ -77,7 +77,7 @@ export default function Services() {
           {services.slice(3).map((s) => (
             <div
               key={s.tag}
-              className="flex flex-col gap-5 p-8 md:p-[40px] md:h-[260px] bg-[#111111] border border-[#2D2D2D] w-full md:flex-1"
+              className="flex flex-col gap-5 p-8 md:p-[40px] md:h-[260px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full md:flex-1 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors"
             >
               <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
                 {s.tag}

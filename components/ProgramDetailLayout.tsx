@@ -20,10 +20,10 @@ export default function ProgramDetailLayout({
   children,
 }: ProgramDetailLayoutProps) {
   return (
-    <main className="flex flex-col w-full bg-[#0A0A0A] pt-[96px]">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] relative z-10">
       
       {/* Hero Section */}
-      <section className="flex flex-col items-center w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] gap-8 border-b border-[#1D1D1D]">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:py-[100px] gap-8 border-b border-white/[0.08]">
         <div className="flex items-center justify-center gap-[8px] h-[32px] px-[16px] bg-[#1A1A1A] border border-[#A855F7]">
           <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
             <GlitchText text={`[${tag}]`} speed={30} />
@@ -38,7 +38,7 @@ export default function ProgramDetailLayout({
       </section>
 
       {/* Content */}
-      <section className="flex flex-col items-center w-full bg-[#050505] py-16 px-6 md:py-[100px] gap-12">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:py-[100px] gap-12">
         <div className="w-full max-w-[800px] flex flex-col gap-8">
           {children}
         </div>

@@ -5,9 +5,9 @@ import GlitchText from "@/components/GlitchText";
 
 export default function ArticlePage() {
   return (
-    <main className="flex flex-col w-full bg-[#0A0A0A] pt-[96px] min-h-screen">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] min-h-screen relative z-10">
       {/* Hero */}
-      <section className="flex flex-col items-center w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] gap-8 border-b border-[#1D1D1D]">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:py-[100px] gap-8 border-b border-white/[0.08]">
         <div className="flex items-center justify-center gap-[8px] h-[32px] px-[16px] bg-[#A855F7]">
           <span className="font-ibm-mono text-[11px] font-bold text-white tracking-[2px]">
             <GlitchText text="[ARTICLE]" speed={30} />
@@ -18,7 +18,7 @@ export default function ArticlePage() {
         </h1>
         
         {/* Cover Image */}
-        <div className="w-full max-w-[900px] aspect-[16/9] mt-8 bg-[#111111] border border-[#2D2D2D] relative overflow-hidden">
+        <div className="w-full max-w-[900px] aspect-[16/9] mt-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/crowd.jpg"
@@ -32,7 +32,7 @@ export default function ArticlePage() {
       </section>
 
       {/* Article Body */}
-      <section className="flex flex-col items-center w-full bg-[#050505] py-16 px-6 md:py-[100px] gap-12">
+      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:py-[100px] gap-12">
         <div className="w-full max-w-[800px] flex flex-col gap-8 font-ibm-mono text-[14px] text-[#AAAAAA] tracking-[0.5px] leading-[1.8]">
           <p>Hey Queen,</p>
           <p>
@@ -59,7 +59,7 @@ export default function ArticlePage() {
               { title: "9. Time Management & Prioritization", desc: "Your time is precious, Queen. Use it with intention." },
               { title: "10. Cultural Intelligence", desc: "Understanding and respecting different backgrounds makes you a more powerful force for change." }
             ].map(item => (
-              <div key={item.title} className="flex flex-col gap-3 p-6 md:p-8 bg-[#111111] border-l-2 border-l-[#A855F7]">
+              <div key={item.title} className="flex flex-col gap-3 p-6 md:p-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border-l-4 border-l-[#A855F7]">
                 <h4 className="font-grotesk text-[20px] font-bold text-[#F5F5F0]">{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

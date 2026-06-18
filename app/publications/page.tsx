@@ -29,10 +29,10 @@ export default function PublicationsPage() {
     : publications.filter(p => p.category === filter);
 
   return (
-    <main className="flex flex-col w-full bg-[#0A0A0A] pt-[96px] min-h-screen">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] min-h-screen relative z-10">
       
       {/* Intro */}
-      <section className="flex flex-col w-full bg-[#0A0A0A] py-16 px-6 md:py-[100px] md:px-[120px] gap-12 border-b border-[#1D1D1D]">
+      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 border-b border-white/[0.08]">
         <SectionHeader
           label="PUBLICATIONS"
           title={"CHECK OUT OUR\nAMAZING PUBLICATIONS."}
@@ -47,9 +47,10 @@ export default function PublicationsPage() {
               onClick={() => setFilter(f)}
               className="flex items-center justify-center h-[40px] px-[20px] border transition-colors"
               style={{
-                borderColor: filter === f ? "#A855F7" : "#2D2D2D",
-                backgroundColor: filter === f ? "#A855F7" : "#111111",
+                borderColor: filter === f ? "#A855F7" : "rgba(255,255,255,0.08)",
+                backgroundColor: filter === f ? "#A855F7" : "rgba(255,255,255,0.03)",
                 color: filter === f ? "white" : "#888888",
+                backdropFilter: "blur(10px)",
               }}
             >
               <span className="font-ibm-mono text-[11px] font-bold tracking-[1px] uppercase">
@@ -61,7 +62,7 @@ export default function PublicationsPage() {
       </section>
 
       {/* Grid */}
-      <section className="flex flex-col w-full bg-[#050505] py-16 px-6 md:py-[80px] md:px-[120px]">
+      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[80px] md:px-[120px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {filtered.map(pub => (
             <PublicationCard key={pub.title} {...pub} />

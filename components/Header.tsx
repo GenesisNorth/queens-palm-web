@@ -48,10 +48,10 @@ export default function Header() {
       <div
         className="transition-all duration-300"
         style={{
-          background: scrolled ? "rgba(10,10,10,0.92)" : "rgba(10,10,10,0.7)",
-          backdropFilter: "blur(14px)",
-          WebkitBackdropFilter: "blur(14px)",
-          borderBottom: scrolled ? "1px solid #1E1E1E" : "1px solid transparent",
+          background: scrolled ? "rgba(255,255,255,0.03)" : "transparent",
+          backdropFilter: scrolled ? "blur(24px)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(24px)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
         }}
       >
         <div className="flex items-center justify-between h-[60px] px-6 md:px-[48px] max-w-[1400px] mx-auto">
@@ -139,9 +139,10 @@ export default function Header() {
         className="md:hidden overflow-hidden transition-all duration-300"
         style={{
           maxHeight: menuOpen ? "500px" : "0px",
-          background: "rgba(10,10,10,0.97)",
-          backdropFilter: "blur(14px)",
-          borderBottom: menuOpen ? "1px solid #1E1E1E" : "none",
+          background: "rgba(15,15,15,0.85)",
+          backdropFilter: "blur(24px)",
+          WebkitBackdropFilter: "blur(24px)",
+          borderBottom: menuOpen ? "1px solid rgba(255,255,255,0.08)" : "none",
         }}
       >
         <nav className="flex flex-col px-6 py-5 gap-0">

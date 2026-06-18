@@ -40,12 +40,7 @@ export default function HeroSlider() {
   const slide = slides[active];
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-full bg-[#0A0A0A] min-h-[85vh] py-24 px-6 md:py-[140px] md:px-[120px] overflow-hidden">
-      {/* Animated background grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle, #A855F7 1px, transparent 1px)`,
-        backgroundSize: '40px 40px',
-      }} />
+    <section className="relative flex flex-col items-center justify-center w-full bg-transparent min-h-[85vh] py-24 px-6 md:py-[140px] md:px-[120px] overflow-hidden">
 
       {/* Content */}
       <div
@@ -88,7 +83,7 @@ export default function HeroSlider() {
             </a>
             <a
               href="/about"
-              className="flex items-center justify-center w-full sm:w-[200px] h-[56px] bg-[#0A0A0A] border-2 border-[#3D3D3D] hover:border-[#888888] transition-colors"
+              className="flex items-center justify-center w-full sm:w-[200px] h-[56px] bg-white/[0.02] backdrop-blur-md border border-white/[0.08] hover:border-white/[0.2] transition-colors shadow-lg"
             >
               <span className="font-ibm-mono text-[12px] text-[#888888] tracking-[2px]">
                 LEARN MORE &gt;
