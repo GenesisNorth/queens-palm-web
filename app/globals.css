@@ -5,10 +5,16 @@
   --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
 
   --animate-wave-flow: wave-flow 60s linear infinite;
+  --animate-slide-right: slide-right 50s linear infinite;
   
   @keyframes wave-flow {
     0% { background-position: 0 0; }
     100% { background-position: 1200px -1200px; }
+  }
+
+  @keyframes slide-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
   }
 }
 
