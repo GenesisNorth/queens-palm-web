@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+}
+
+:root {
+  --accent-primary: #A855F7;
+  --accent-secondary: #7C3AED;
+  --accent-hover: #9333EA;
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #0F0F0F;
+  --bg-card: #111111;
+  --bg-elevated: #1A1A1A;
+  --text-light: #F5F5F0;
+  --text-gray: #888888;
+  --text-muted: #555555;
+  --text-dim: #444444;
+  --border-dark: #2D2D2D;
+  --border-subtle: #1D1D1D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: #F5F5F0;
+}
+
+@utility font-grotesk {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+}
+
+@utility font-ibm-mono {
+  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+}
