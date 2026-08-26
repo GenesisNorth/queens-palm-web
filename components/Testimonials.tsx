@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     quote:
-      "Queens Palms Masterclass helped me discover what I am really made of. I'm grateful to have learnt so much about Emotional Intelligence, Digital Media Literacy, Leadership Skills, and Personal Branding.",
+      "Queens Palm Masterclass helped me discover what I am really made of. I'm grateful to have learnt so much about Emotional Intelligence, Digital Media Literacy, Leadership Skills, and Personal Branding.",
     name: "JENNIFER DAVID",
     role: "MASTERCLASS PARTICIPANT",
   },
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     quote:
-      "Many thanks to Queens Palms Support Initiative for the free Masterclass. Personally, it was so insightful and informative. The class on \"Emotional Intelligence\" made a real impact on me.",
+      "Many thanks to Queens Palm Support Initiative for the free Masterclass. Personally, it was so insightful and informative. The class on \"Emotional Intelligence\" made a real impact on me.",
     name: "IRENE ADESOTU",
     role: "MASTERCLASS PARTICIPANT",
   },
@@ -58,7 +58,7 @@ export default function Testimonials() {
           {[...testimonials, ...testimonials].map((t, i) => (
             <div
               key={`${t.name}-${i}`}
-              className="flex flex-col gap-6 p-8 md:p-[40px] shrink-0 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] w-[320px] md:w-[450px] border-white/[0.08] hover:border-[#A855F7] transition-colors duration-500 rounded-xl"
+              className="flex flex-col gap-6 p-8 md:p-[40px] shrink-0 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] w-[85vw] sm:w-[320px] md:w-[450px] border-white/[0.08] hover:border-[#A855F7] transition-colors duration-500 rounded-xl"
             >
               <p className="font-ibm-mono text-[13px] text-[#CCCCCC] tracking-[0.5px] leading-[1.7]">
                 &ldquo;{t.quote}&rdquo;

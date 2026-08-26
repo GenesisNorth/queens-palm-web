@@ -41,7 +41,7 @@ export default function ArticlePage() {
             changing, so must we — especially in the way we show up, grow, and communicate.
           </p>
           <p>
-            At Queens Palms Support Initiative, we believe every woman should have the tools — not just to
+            At Queens Palm Support Initiative, we believe every woman should have the tools — not just to
             survive, but to truly thrive. So we've put together a list of soft skills that can help you rise
             confidently in 2025, in your career, personal life, and purpose. Let's grow together, shall we?
           </p>
@@ -71,7 +71,7 @@ export default function ArticlePage() {
             <p className="mb-6">
               The world needs more women who are emotionally strong, purpose-driven, and deeply aware of their power. These soft skills aren't just "nice to have" — they're tools for building the future you deserve. Take your time. Grow in your own way. And remember: you're already enough, and still becoming more.
             </p>
-            <p>With love and strength,<br/>Queens Palms Support Initiative</p>
+            <p>With love and strength,<br/>Queens Palm Support Initiative</p>
           </div>
         </div>
 

@@ -37,7 +37,7 @@ export default function AboutPage() {
         <SectionHeader
           label="ABOUT US"
           title={"SHARE THE JOY OF\nACHIEVING GLORIOUS\nMOMENTS."}
-          subtitle="2+ YEARS OF TRANSFORMATIVE IMPACT — TREMENDOUS IMPACT AND PROGRESS SO FAR."
+          subtitle="5+ YEARS OF TRANSFORMATIVE IMPACT — TREMENDOUS IMPACT AND PROGRESS SO FAR."
         />
 
         <div className="flex flex-col gap-6 p-8 md:p-[40px] bg-[#111111] border border-[#2D2D2D] w-full max-w-[800px]">

@@ -153,7 +153,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full px-6 md:px-[120px] py-4 md:h-[56px] border-t border-t-[#1D1D1D] gap-3 sm:gap-0">
         <span className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px]">
-          © 2025 QUEENS PALMS SUPPORT INITIATIVE. ALL RIGHTS RESERVED.
+          © 2026 QUEENS PALM SUPPORT INITIATIVE. ALL RIGHTS RESERVED.
         </span>
         <div className="flex items-center gap-6 md:gap-[32px]">
           <a

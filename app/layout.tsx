@@ -17,15 +17,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Queens Palms Support Initiative — Empowering Young Minds",
+  title: "Queens Palm Support Initiative — Empowering Young Minds",
   description:
     "QPSI empowers young people with essential soft skills that are timeless and invaluable for success in life and career. Aligned with UN SDG 4.",
   openGraph: {
-    title: "Queens Palms Support Initiative",
+    title: "Queens Palm Support Initiative",
     description:
       "Empowering young individuals with essential soft skills for success in life and career.",
     url: "https://queenspalmsi.org",
-    siteName: "Queens Palms Support Initiative",
+    siteName: "Queens Palm Support Initiative",
     type: "website",
   },
 };
