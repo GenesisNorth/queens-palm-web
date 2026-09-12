@@ -35,8 +35,8 @@ export default function PublicationCard({ title, excerpt, category, image, href 
       </div>
       
       {/* Content */}
-      <div className="flex flex-col p-6 md:p-[32px] gap-4 flex-1">
-        <h3 className="font-grotesk text-[18px] md:text-[22px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.2]">
+      <div className="flex flex-col p-6 md:p-[32px] gap-4 flex-1 min-w-0">
+        <h3 className="font-grotesk text-[18px] md:text-[22px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.2] break-words">
           {title}
         </h3>
         <p className="font-ibm-mono text-[12px] text-[#888888] tracking-[0.5px] leading-[1.7] line-clamp-3">

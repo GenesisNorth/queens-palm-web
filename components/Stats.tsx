@@ -11,16 +11,16 @@ export default function Stats() {
       <span className="font-ibm-mono text-[12px] font-bold text-white tracking-[3px]">
         OUR IMPACT
       </span>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full gap-4 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-full gap-4 md:gap-6">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="flex flex-col gap-2 items-center justify-center py-8 px-4 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+            className="flex flex-col gap-2 items-center justify-center py-8 px-4 min-w-0 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
           >
             <span className="font-grotesk text-[40px] md:text-[64px] font-bold text-white tracking-[-2px] leading-none">
               {stat.value}
             </span>
-            <span className="font-ibm-mono text-[10px] md:text-[12px] font-bold text-[rgba(255,255,255,0.7)] tracking-[2px] text-center">
+            <span className="font-ibm-mono text-[10px] md:text-[12px] font-bold text-[rgba(255,255,255,0.7)] tracking-[1px] xl:tracking-[2px] text-center break-words">
               {stat.label}
             </span>
           </div>

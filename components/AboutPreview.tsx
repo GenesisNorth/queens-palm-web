@@ -9,9 +9,9 @@ export default function AboutPreview() {
         subtitle="AT QPSI, WE'RE DEEPLY COMMITTED TO THE VALUES ENSHRINED IN THE UNITED NATIONS SUSTAINABLE DEVELOPMENT GOAL 4 (SDG 4) — ENSURING EVERYONE HAS ACCESS TO QUALITY EDUCATION."
       />
 
-      <div className="flex flex-col md:flex-row w-full gap-[2px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-[2px]">
         {/* About body */}
-        <div className="flex flex-col gap-6 p-8 md:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full md:flex-1 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col gap-6 p-8 md:p-[32px] xl:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
           <p className="font-ibm-mono text-[12px] md:text-[13px] text-[#AAAAAA] tracking-[0.5px] leading-[1.8]">
             We take this a step further by empowering young people, regardless of
             background, with essential soft skills that are critical for success in
@@ -21,22 +21,22 @@ export default function AboutPreview() {
         </div>
 
         {/* Vision */}
-        <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#A855F7] w-full md:flex-1">
+        <div className="flex flex-col gap-5 p-8 md:p-[32px] xl:p-[40px] bg-[#A855F7] w-full min-w-0">
           <span className="font-ibm-mono text-[11px] font-bold text-[rgba(255,255,255,0.7)] tracking-[2px]">
             OUR VISION
           </span>
-          <h3 className="font-grotesk text-[22px] md:text-[26px] font-bold text-white tracking-[-1px] leading-[1.15]">
+          <h3 className="font-grotesk text-[20px] xl:text-[26px] font-bold text-white tracking-[-1px] leading-[1.15] break-words">
             TO EMPOWER INDIVIDUALS TO FLOURISH WITH PURPOSE AND IGNITE POSITIVE
             CHANGE IN THE WORLD.
           </h3>
         </div>
 
         {/* Mission */}
-        <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full md:flex-1 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col gap-5 p-8 md:p-[32px] xl:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
           <span className="font-ibm-mono text-[11px] font-bold text-[#7C3AED] tracking-[2px]">
             OUR MISSION
           </span>
-          <h3 className="font-grotesk text-[22px] md:text-[26px] font-bold text-[#F5F5F0] tracking-[-1px] leading-[1.15]">
+          <h3 className="font-grotesk text-[20px] xl:text-[26px] font-bold text-[#F5F5F0] tracking-[-1px] leading-[1.15] break-words">
             GUIDING YOUNG PEOPLE ON A JOURNEY OF SELF-DISCOVERY WHERE THEY
             CULTIVATE ESSENTIAL SOFT SKILLS FOR A FULFILLING LIFE.
           </h3>

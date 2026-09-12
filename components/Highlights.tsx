@@ -43,11 +43,11 @@ export default function Highlights() {
         title={"WHY QPSI\nMATTERS."}
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-[2px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-full gap-[2px]">
         {highlights.map((h, i) => (
           <div
             key={h.title}
-            className={`flex flex-col gap-6 p-8 md:p-[40px] w-full border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors ${
+            className={`flex flex-col gap-6 p-8 md:p-[40px] w-full min-w-0 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors ${
               i === 0 ? "border-white/[0.08]" : "border-white/[0.08]"
             }`}
           >
@@ -57,10 +57,10 @@ export default function Highlights() {
             >
               [{String(i + 1).padStart(2, "0")}]
             </span>
-            <h3 className="font-grotesk text-[16px] font-bold text-[#F5F5F0] tracking-[0.5px] leading-[1.2]">
+            <h3 className="font-grotesk text-[16px] font-bold text-[#F5F5F0] tracking-[0.5px] leading-[1.2] break-words">
               {h.title}
             </h3>
-            <p className="font-ibm-mono text-[11px] text-[#666666] tracking-[0.5px] leading-[1.6]">
+            <p className="font-ibm-mono text-[11px] text-[#666666] tracking-[0.5px] leading-[1.6] break-words">
               {h.description}
             </p>
           </div>

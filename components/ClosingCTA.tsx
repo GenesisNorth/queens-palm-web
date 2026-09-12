@@ -13,7 +13,7 @@ export default function ClosingCTA() {
       </div>
 
       {/* Title */}
-      <h2 className="font-grotesk text-[36px] md:text-[64px] font-bold text-[#F5F5F0] tracking-[-2px] leading-none text-center w-full max-w-[900px] whitespace-pre-line">
+      <h2 className="font-grotesk text-[clamp(28px,6.5vw,64px)] font-bold text-[#F5F5F0] tracking-[-2px] leading-none text-center w-full max-w-[900px] whitespace-pre-line break-words">
         <GlitchText
           text={"TO MAKE REQUESTS FOR\nFURTHER INFORMATION,\nCONTACT US."}
           speed={40}

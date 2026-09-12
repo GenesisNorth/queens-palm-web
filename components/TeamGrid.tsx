@@ -17,7 +17,7 @@ export default function TeamGrid() {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
         {placeholders.map((member) => (
-          <div key={member.id} className="flex flex-col gap-4">
+          <div key={member.id} className="flex flex-col gap-4 min-w-0">
             <div className="w-full aspect-[3/4] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center justify-center gap-2">
               <span className="font-ibm-mono text-[10px] text-[#555] tracking-[2px]">
                 [TEAM PHOTO]
@@ -26,7 +26,7 @@ export default function TeamGrid() {
             
             {/* Details */}
             <div className="flex flex-col gap-1">
-              <h4 className="font-grotesk text-[16px] font-bold text-[#F5F5F0] tracking-[0.5px]">
+              <h4 className="font-grotesk text-[16px] font-bold text-[#F5F5F0] tracking-[0.5px] break-words">
                 {member.name}
               </h4>
               <span className="font-ibm-mono text-[11px] text-[#A855F7] tracking-[1px]">

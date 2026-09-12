@@ -51,20 +51,20 @@ export default function AboutPage() {
 
         {/* Vision & Mission */}
         <div className="flex flex-col md:flex-row w-full gap-[2px]">
-          <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#A855F7] w-full md:flex-1">
+          <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#A855F7] w-full md:flex-1 md:min-w-0">
             <span className="font-ibm-mono text-[11px] font-bold text-[rgba(255,255,255,0.7)] tracking-[2px]">
               OUR VISION
             </span>
-            <h3 className="font-grotesk text-[22px] md:text-[26px] font-bold text-white tracking-[-1px] leading-[1.15]">
+            <h3 className="font-grotesk text-[20px] md:text-[22px] xl:text-[26px] font-bold text-white tracking-[-1px] leading-[1.15] break-words">
               TO EMPOWER INDIVIDUALS TO FLOURISH WITH PURPOSE AND IGNITE POSITIVE
               CHANGE IN THE WORLD.
             </h3>
           </div>
-          <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#0F0F0F] border-2 border-[#7C3AED] w-full md:flex-1">
+          <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#0F0F0F] border-2 border-[#7C3AED] w-full md:flex-1 md:min-w-0">
             <span className="font-ibm-mono text-[11px] font-bold text-[#7C3AED] tracking-[2px]">
               OUR MISSION
             </span>
-            <h3 className="font-grotesk text-[22px] md:text-[26px] font-bold text-[#F5F5F0] tracking-[-1px] leading-[1.15]">
+            <h3 className="font-grotesk text-[20px] md:text-[22px] xl:text-[26px] font-bold text-[#F5F5F0] tracking-[-1px] leading-[1.15] break-words">
               GUIDING YOUNG PEOPLE ON A JOURNEY OF SELF-DISCOVERY WHERE THEY
               CULTIVATE ESSENTIAL SOFT SKILLS FOR A FULFILLING LIFE.
             </h3>
@@ -84,7 +84,7 @@ export default function AboutPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
           {programs.map((prog, i) => (
-            <div key={prog.title} className="flex flex-col gap-6 p-8 md:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] transition-colors group">
+            <div key={prog.title} className="flex flex-col gap-6 p-8 md:p-[32px] xl:p-[40px] min-w-0 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] transition-colors group">
               <div className="flex items-center justify-between">
                 <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
                   [0{i + 1}]
@@ -94,11 +94,11 @@ export default function AboutPage() {
                 </Link>
               </div>
               
-              <h3 className="font-grotesk text-[20px] md:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15]">
+              <h3 className="font-grotesk text-[20px] xl:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15] break-words">
                 {prog.title}
               </h3>
               
-              <p className="font-ibm-mono text-[12px] text-[#888888] tracking-[0.5px] leading-[1.7] line-clamp-4">
+              <p className="font-ibm-mono text-[12px] text-[#888888] tracking-[0.5px] leading-[1.7] line-clamp-4 break-words">
                 {prog.description}
               </p>
               
@@ -117,7 +117,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:p-[120px] gap-10 md:gap-[48px] border-t border-white/[0.08]">
-        <h2 className="font-grotesk text-[36px] md:text-[56px] font-bold text-[#F5F5F0] tracking-[-2px] leading-none text-center w-full max-w-[800px]">
+        <h2 className="font-grotesk text-[clamp(28px,6vw,56px)] font-bold text-[#F5F5F0] tracking-[-2px] leading-none text-center w-full max-w-[800px] break-words">
           BRIGHT FUTURE THAT WE CHERISH. WE THRIVE FOR SUCCESS.
         </h2>
         <a

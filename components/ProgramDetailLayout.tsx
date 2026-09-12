@@ -29,7 +29,7 @@ export default function ProgramDetailLayout({
             <GlitchText text={`[${tag}]`} speed={30} />
           </span>
         </div>
-        <h1 className="font-grotesk text-[32px] md:text-[56px] font-bold text-[#F5F5F0] tracking-[-1px] leading-none text-center w-full max-w-[800px] whitespace-pre-line">
+        <h1 className="font-grotesk text-[clamp(26px,6.5vw,56px)] font-bold text-[#F5F5F0] tracking-[-1px] leading-none text-center w-full max-w-[800px] whitespace-pre-line break-words">
           <GlitchText text={title} speed={40} delay={150} />
         </h1>
         <p className="font-ibm-mono text-[12px] md:text-[14px] text-[#888888] tracking-[0.5px] leading-[1.8] text-center w-full max-w-[700px]">

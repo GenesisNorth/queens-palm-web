@@ -39,9 +39,9 @@ export default function Footer() {
   return (
     <footer className="flex flex-col w-full bg-[#050505]">
       {/* Top */}
-      <div className="flex flex-col md:flex-row gap-12 md:gap-[60px] lg:gap-[80px] px-6 md:px-[120px] py-12 md:py-[64px]">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-[40px] xl:gap-[56px] px-6 md:px-[48px] xl:px-[120px] py-12 md:py-[64px]">
         {/* Brand */}
-        <div className="flex flex-col gap-6 md:w-[280px] md:shrink-0">
+        <div className="flex flex-col gap-6 lg:w-[200px] xl:w-[240px] lg:shrink-0">
           <div className="flex items-center gap-[12px]">
             <div className="w-[32px] h-[32px] bg-[#A855F7] shrink-0" />
             <span className="font-grotesk text-[16px] font-bold text-[#A855F7] tracking-[3px]">
@@ -63,7 +63,7 @@ export default function Footer() {
             </a>
             <a
               href="mailto:contact@queenspalmsi.com"
-              className="font-ibm-mono text-[11px] text-[#888888] tracking-[1px] hover:text-[#A855F7] transition-colors"
+              className="font-ibm-mono text-[11px] text-[#888888] tracking-[1px] hover:text-[#A855F7] transition-colors break-all"
             >
               CONTACT@QUEENSPALMSI.COM
             </a>
@@ -100,13 +100,13 @@ export default function Footer() {
         </div>
 
         {/* Link columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-1 gap-8 md:gap-[60px] lg:gap-[80px]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-1 gap-8 lg:gap-[28px] xl:gap-[40px]">
           {[
             { heading: "PROGRAMS", links: programLinks },
             { heading: "EXPLORE", links: exploreLinks },
             { heading: "SUPPORT", links: supportLinks },
           ].map((col) => (
-            <div key={col.heading} className="flex flex-col gap-4 md:gap-[20px]">
+            <div key={col.heading} className="flex flex-col gap-4 md:gap-[20px] min-w-0 lg:flex-1 lg:min-w-[112px]">
               <span className="font-grotesk text-[11px] font-bold text-[#F5F5F0] tracking-[2px]">
                 {col.heading}
               </span>
@@ -114,7 +114,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-ibm-mono text-[12px] text-[#888888] tracking-[1px] hover:text-[#CCCCCC] transition-colors"
+                  className="font-ibm-mono text-[12px] text-[#888888] tracking-[1px] hover:text-[#CCCCCC] transition-colors break-words"
                 >
                   {link.label}
                 </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div className="flex flex-col gap-4 md:gap-[20px] col-span-2 sm:col-span-3 md:col-span-1 md:min-w-[220px]">
+          <div className="flex flex-col gap-4 md:gap-[20px] col-span-2 sm:col-span-3 lg:col-span-1 min-w-0 lg:flex-[1.3] lg:min-w-[170px]">
             <span className="font-grotesk text-[11px] font-bold text-[#F5F5F0] tracking-[2px]">
               NEWSLETTER
             </span>
@@ -137,7 +137,7 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="YOUR EMAIL"
                 required
-                className="flex-1 h-[40px] px-3 bg-[#111111] border border-[#2D2D2D] border-r-0 font-ibm-mono text-[11px] text-[#F5F5F0] tracking-[1px] placeholder:text-[#444] outline-none focus:border-[#A855F7] transition-colors"
+                className="flex-1 min-w-0 h-[40px] px-3 bg-[#111111] border border-[#2D2D2D] border-r-0 font-ibm-mono text-[11px] text-[#F5F5F0] tracking-[1px] placeholder:text-[#444] outline-none focus:border-[#A855F7] transition-colors"
               />
               <button
                 type="submit"
@@ -151,8 +151,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full px-6 md:px-[120px] py-4 md:h-[56px] border-t border-t-[#1D1D1D] gap-3 sm:gap-0">
-        <span className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px]">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full px-6 md:px-[48px] xl:px-[120px] py-4 md:min-h-[56px] border-t border-t-[#1D1D1D] gap-3 sm:gap-4">
+        <span className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px] break-words">
           © 2026 QUEENS PALM SUPPORT INITIATIVE. ALL RIGHTS RESERVED.
         </span>
         <div className="flex items-center gap-6 md:gap-[32px]">

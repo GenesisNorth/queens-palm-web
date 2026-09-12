@@ -46,11 +46,11 @@ export default function Services() {
 
       <div className="flex flex-col w-full gap-[2px]">
         {/* Row 1 — 3 items */}
-        <div className="flex flex-col md:flex-row w-full gap-[2px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-[2px]">
           {services.slice(0, 3).map((s, i) => (
             <div
               key={s.tag}
-              className={`flex flex-col gap-5 p-8 md:p-[40px] md:h-[280px] w-full md:flex-1 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors ${
+              className={`flex flex-col gap-5 p-8 md:p-[32px] xl:p-[40px] lg:min-h-[280px] w-full min-w-0 border bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors ${
                 i === 0
                   ? "border-white/[0.08] border-t-[#A855F7]"
                   : "border-white/[0.08]"
@@ -62,10 +62,10 @@ export default function Services() {
               >
                 {s.tag}
               </span>
-              <h3 className="font-grotesk text-[20px] md:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15]">
+              <h3 className="font-grotesk text-[20px] xl:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15] break-words">
                 {s.title}
               </h3>
-              <p className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px] leading-[1.6]">
+              <p className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px] leading-[1.6] break-words">
                 {s.description}
               </p>
             </div>
@@ -73,19 +73,19 @@ export default function Services() {
         </div>
 
         {/* Row 2 — 2 items */}
-        <div className="flex flex-col md:flex-row w-full gap-[2px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-[2px]">
           {services.slice(3).map((s) => (
             <div
               key={s.tag}
-              className="flex flex-col gap-5 p-8 md:p-[40px] md:h-[260px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full md:flex-1 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors"
+              className="flex flex-col gap-5 p-8 md:p-[32px] xl:p-[40px] md:min-h-[260px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors"
             >
               <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
                 {s.tag}
               </span>
-              <h3 className="font-grotesk text-[20px] md:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15]">
+              <h3 className="font-grotesk text-[20px] xl:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15] break-words">
                 {s.title}
               </h3>
-              <p className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px] leading-[1.6]">
+              <p className="font-ibm-mono text-[11px] text-[#666666] tracking-[1px] leading-[1.6] break-words">
                 {s.description}
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function Services() {
       </div>
 
       {/* CTA */}
-      <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 pt-4">
         <span className="font-ibm-mono text-[13px] text-[#888888] tracking-[1px]">
           DO YOU WANT TO BE A PART OF QPSI?
         </span>

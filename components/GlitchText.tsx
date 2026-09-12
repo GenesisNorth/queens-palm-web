@@ -54,20 +54,25 @@ export default function GlitchText({
 
   return (
     // Outer span: holds the full text invisibly to reserve exact dimensions
-    <span ref={ref} className={className} style={{ position: "relative", display: "inline-block" }}>
+    <span
+      ref={ref}
+      className={className}
+      style={{ position: "relative", display: "inline-block", maxWidth: "100%" }}
+    >
       {/* Ghost text — always here, reserves width + height, never visible */}
-      <span aria-hidden="true" style={{ visibility: "hidden", whiteSpace: "pre" }}>
+      <span aria-hidden="true" style={{ visibility: "hidden", whiteSpace: "pre-wrap" }}>
         {text}
       </span>
 
-      {/* Animated text — absolutely overlaid, same position */}
+      {/* Animated text — absolutely overlaid, same position + same wrap width */}
       <span
         aria-live="polite"
         style={{
           position: "absolute",
           top: 0,
           left: 0,
-          whiteSpace: "pre",
+          width: "100%",
+          whiteSpace: "pre-wrap",
         }}
       >
         {started ? displayed : ""}
@@ -85,13 +90,6 @@ export default function GlitchText({
           />
         )}
       </span>
-
-      <style>{`
-        @keyframes tw-blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-      `}</style>
     </span>
   );
 }

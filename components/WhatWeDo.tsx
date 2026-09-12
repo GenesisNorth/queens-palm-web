@@ -32,21 +32,21 @@ export default function WhatWeDo() {
         title={"BUILDING FUTURES.\nONE SKILL AT A TIME."}
       />
 
-      <div className="flex flex-col md:flex-row w-full gap-[2px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-[2px]">
         {cards.map((card) => (
           <div
             key={card.tag}
-            className="flex flex-col gap-5 p-8 md:p-[32px] border border-white/[0.08] w-full md:flex-1 md:h-[320px] bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors"
+            className="flex flex-col gap-5 p-8 md:p-[32px] border border-white/[0.08] w-full min-w-0 lg:min-h-[320px] bg-white/[0.02] backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:bg-white/[0.05] transition-colors"
             style={{ borderTopColor: card.accent }}
           >
             <div
               className="w-[40px] h-[40px] shrink-0"
               style={{ backgroundColor: card.accent }}
             />
-            <h3 className="font-grotesk text-[18px] font-bold text-[#F5F5F0] tracking-[1px] leading-[1.2] whitespace-pre-line">
+            <h3 className="font-grotesk text-[18px] font-bold text-[#F5F5F0] tracking-[1px] leading-[1.2] whitespace-pre-line break-words">
               {card.title}
             </h3>
-            <p className="font-ibm-mono text-[12px] text-[#666666] tracking-[1px] leading-[1.6]">
+            <p className="font-ibm-mono text-[12px] text-[#666666] tracking-[1px] leading-[1.6] break-words">
               {card.description}
             </p>
             <div

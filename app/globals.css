@@ -18,6 +18,12 @@
   }
 }
 
+/* GlitchText typing caret */
+@keyframes tw-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 :root {
   --accent-primary: #A855F7;
   --accent-secondary: #7C3AED;

@@ -59,7 +59,7 @@ export default function HeroSlider() {
         )}
 
         {/* Heading */}
-        <h1 className="font-grotesk text-[clamp(32px,8vw,80px)] font-bold text-[#F5F5F0] tracking-[-1px] leading-none text-center w-full whitespace-pre-line">
+        <h1 className="font-grotesk text-[clamp(28px,7.5vw,80px)] font-bold text-[#F5F5F0] tracking-[-1px] leading-none text-center w-full whitespace-pre-line break-words">
           <GlitchText text={slide.heading} speed={35} delay={100} key={`h-${active}`} />
         </h1>
 
