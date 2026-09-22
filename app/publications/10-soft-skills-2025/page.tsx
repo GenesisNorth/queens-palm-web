@@ -21,7 +21,7 @@ export default function ArticlePage() {
         <div className="w-full max-w-[900px] aspect-[16/9] mt-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/crowd.jpg"
+            src="/images/_DSC0138.jpg"
             alt="Crowd"
             className="absolute inset-0 w-full h-full object-cover opacity-80"
             onError={(e) => {

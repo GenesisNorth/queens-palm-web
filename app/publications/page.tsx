@@ -9,7 +9,7 @@ const publications = [
     title: "Dear Queen, Here Are 10 Soft Skills You Need in 2025",
     excerpt: "We see you — balancing so many roles, navigating life's twists, showing up for others, and still trying to pour into yourself. It's not easy, but you're doing it with grace.",
     category: "Articles",
-    image: "/images/crowd.jpg",
+    image: "/images/_DSC0138.jpg",
     href: "/publications/10-soft-skills-2025",
   },
   {

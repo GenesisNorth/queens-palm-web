@@ -1,10 +1,10 @@
 import SectionHeader from "./SectionHeader";
 
 const placeholders = [
-  { id: 1, name: "JOHN DOE", role: "DIRECTOR" },
-  { id: 2, name: "JANE SMITH", role: "PROGRAM MANAGER" },
-  { id: 3, name: "ALEX JOHNSON", role: "LEAD MENTOR" },
-  { id: 4, name: "SARAH WILLIAMS", role: "COMMUNITY LEAD" },
+  { id: 1, name: "JOHN DOE", role: "DIRECTOR", image: "/images/_DSC0051.jpg" },
+  { id: 2, name: "JANE SMITH", role: "PROGRAM MANAGER", image: "/images/_DSC0047.jpg" },
+  { id: 3, name: "ALEX JOHNSON", role: "LEAD MENTOR", image: "/images/_DSC0147.jpg" },
+  { id: 4, name: "SARAH WILLIAMS", role: "COMMUNITY LEAD", image: "/images/_DSC0069.jpg" },
 ];
 
 export default function TeamGrid() {
@@ -18,10 +18,13 @@ export default function TeamGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
         {placeholders.map((member) => (
           <div key={member.id} className="flex flex-col gap-4 min-w-0">
-            <div className="w-full aspect-[3/4] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center justify-center gap-2">
-              <span className="font-ibm-mono text-[10px] text-[#555] tracking-[2px]">
-                [TEAM PHOTO]
-              </span>
+            <div className="w-full aspect-[3/4] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center justify-center gap-2 overflow-hidden relative group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={member.image}
+                alt={member.name}
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+              />
             </div>
             
             {/* Details */}
