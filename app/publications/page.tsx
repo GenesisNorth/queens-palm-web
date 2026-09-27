@@ -16,7 +16,7 @@ const publications = [
     title: "Newspaper Publications & Press Mentions",
     excerpt: "Media coverage of QPSI's King's Conference (Lagos, 2024) and its work empowering young women across Vanguard, The Guardian, and more.",
     category: "Press",
-    image: "/images/IMG_4485.jpg",
+    image: "/images/_DSC0184.jpg",
     href: "/publications/press",
   },
 ];

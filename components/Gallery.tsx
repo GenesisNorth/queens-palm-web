@@ -14,7 +14,7 @@ const images = [
   { src: "/images/_DSC0046.jpg", className: "md:col-span-1 md:row-span-2", alt: "Mentorship" },
   { src: "/images/_DSC0186.jpg", className: "md:col-span-1 md:row-span-1", alt: "Student Engagement" },
   { src: "/images/_DSC0051.jpg", className: "md:col-span-2 md:row-span-2", alt: "Leadership" },
-  { src: "/images/IMG_4485.jpg", className: "md:col-span-1 md:row-span-1", alt: "Awards Ceremony" },
+  { src: "/images/_DSC0184.jpg", className: "md:col-span-1 md:row-span-1", alt: "Awards Ceremony" },
 ];
 
 export default function Gallery() {

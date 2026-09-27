@@ -15,7 +15,7 @@ const allImages = [
   { src: "/images/_DSC0046.jpg", className: "md:col-span-1 md:row-span-2", alt: "Mentorship" },
   { src: "/images/_DSC0186.jpg", className: "md:col-span-1 md:row-span-1", alt: "Student Engagement" },
   { src: "/images/_DSC0051.jpg", className: "md:col-span-2 md:row-span-2", alt: "Leadership" },
-  { src: "/images/IMG_4485.jpg", className: "md:col-span-1 md:row-span-1", alt: "Awards Ceremony" },
+  { src: "/images/_DSC0184.jpg", className: "md:col-span-1 md:row-span-1", alt: "Awards Ceremony" },
   
   // Next 5 rows
   { src: "/images/_DSC0111.jpg", className: "md:col-span-2 md:row-span-1", alt: "Audience Seated" },
@@ -27,8 +27,8 @@ const allImages = [
   { src: "/images/_DSC0130.jpg", className: "md:col-span-1 md:row-span-1", alt: "Crowd" },
   { src: "/images/_DSC0175.jpg", className: "md:col-span-1 md:row-span-2", alt: "Speaker In Blue" },
   { src: "/images/_DSC0074.jpg", className: "md:col-span-1 md:row-span-1", alt: "Volunteers" },
-  { src: "/images/gallery-2.jpg", className: "md:col-span-2 md:row-span-1", alt: "Past Event" },
-  { src: "/images/gallery-3.jpg", className: "md:col-span-1 md:row-span-1", alt: "Community" },
+  { src: "/images/_DSC0161.jpg", className: "md:col-span-2 md:row-span-1", alt: "Past Event" },
+  { src: "/images/_DSC0176.jpg", className: "md:col-span-1 md:row-span-1", alt: "Community" },
   { src: "/images/_DSC0188.jpg", className: "md:col-span-1 md:row-span-1", alt: "Student Workshop" },
   { src: "/images/_DSC0190.jpg", className: "md:col-span-1 md:row-span-1", alt: "Engaged Students" },
 
