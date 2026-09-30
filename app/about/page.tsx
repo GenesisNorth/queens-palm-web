@@ -2,6 +2,7 @@ import SectionHeader from "@/components/SectionHeader";
 import Gallery from "@/components/Gallery";
 import TeamGrid from "@/components/TeamGrid";
 import Link from "next/link";
+import ProgramsStack from "@/components/ProgramsStack";
 
 const JOIN_FORM = "https://forms.gle/fVccqtCVDxbuGPGw6";
 
@@ -30,18 +31,23 @@ const programs = [
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col w-full bg-transparent pt-[96px] relative z-10">
+    <main className="flex flex-col w-full bg-transparent pt-[96px] relative z-10 overflow-hidden">
       
+      {/* Ambient Background Glows */}
+      <div className="absolute top-[10%] left-[-10%] w-[600px] h-[600px] bg-[#A855F7]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-[30%] right-[-10%] w-[600px] h-[600px] bg-[#7C3AED]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+
       {/* Intro Section */}
-      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px]">
+      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[64px] relative">
         <SectionHeader
           label="ABOUT US"
           title={"SHARE THE JOY OF\nACHIEVING GLORIOUS\nMOMENTS."}
           subtitle="5+ YEARS OF TRANSFORMATIVE IMPACT — TREMENDOUS IMPACT AND PROGRESS SO FAR."
         />
 
-        <div className="flex flex-col gap-6 p-8 md:p-[40px] bg-[#111111] border border-[#2D2D2D] w-full max-w-[800px]">
-          <p className="font-ibm-mono text-[12px] md:text-[14px] text-[#AAAAAA] tracking-[0.5px] leading-[1.8]">
+        <div className="flex flex-col gap-6 p-8 md:p-[48px] bg-white/[0.02] backdrop-blur-xl border border-white/[0.08] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.3)] w-full max-w-[900px] relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-[#A855F7]/10 blur-[80px] rounded-full pointer-events-none" />
+          <p className="font-ibm-mono text-[13px] md:text-[15px] text-[#CCCCCC] tracking-[0.5px] leading-[1.8] relative z-10">
             At QPSI, we're deeply committed to the values enshrined in the United Nations
             Sustainable Development Goal 4 (SDG 4) — ensuring everyone has access to quality
             education. We take this a step further by empowering young people, regardless of
@@ -50,21 +56,22 @@ export default function AboutPage() {
         </div>
 
         {/* Vision & Mission */}
-        <div className="flex flex-col md:flex-row w-full gap-[2px]">
-          <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#A855F7] w-full md:flex-1 md:min-w-0">
-            <span className="font-ibm-mono text-[11px] font-bold text-[rgba(255,255,255,0.7)] tracking-[2px]">
+        <div className="flex flex-col md:flex-row w-full gap-6 lg:gap-8 mt-4">
+          <div className="flex flex-col gap-5 p-8 md:p-[48px] bg-gradient-to-br from-[#A855F7] to-[#7C3AED] rounded-[2rem] shadow-[0_20px_40px_rgba(168,85,247,0.3)] w-full md:flex-1 md:min-w-0 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <span className="font-ibm-mono text-[11px] font-bold text-white/80 tracking-[2px] relative z-10">
               OUR VISION
             </span>
-            <h3 className="font-grotesk text-[20px] md:text-[22px] xl:text-[26px] font-bold text-white tracking-[-1px] leading-[1.15] break-words">
+            <h3 className="font-grotesk text-[22px] md:text-[24px] xl:text-[28px] font-bold text-white tracking-[-1px] leading-[1.2] break-words relative z-10">
               TO EMPOWER INDIVIDUALS TO FLOURISH WITH PURPOSE AND IGNITE POSITIVE
               CHANGE IN THE WORLD.
             </h3>
           </div>
-          <div className="flex flex-col gap-5 p-8 md:p-[40px] bg-[#0F0F0F] border-2 border-[#7C3AED] w-full md:flex-1 md:min-w-0">
-            <span className="font-ibm-mono text-[11px] font-bold text-[#7C3AED] tracking-[2px]">
+          <div className="flex flex-col gap-5 p-8 md:p-[48px] bg-[#0A0A0A]/80 backdrop-blur-xl border border-white/[0.08] rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.5)] w-full md:flex-1 md:min-w-0 group hover:border-[#A855F7]/40 transition-colors duration-500">
+            <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
               OUR MISSION
             </span>
-            <h3 className="font-grotesk text-[20px] md:text-[22px] xl:text-[26px] font-bold text-[#F5F5F0] tracking-[-1px] leading-[1.15] break-words">
+            <h3 className="font-grotesk text-[22px] md:text-[24px] xl:text-[28px] font-bold text-[#F5F5F0] tracking-[-1px] leading-[1.2] break-words">
               GUIDING YOUNG PEOPLE ON A JOURNEY OF SELF-DISCOVERY WHERE THEY
               CULTIVATE ESSENTIAL SOFT SKILLS FOR A FULFILLING LIFE.
             </h3>
@@ -76,39 +83,14 @@ export default function AboutPage() {
       <Gallery />
 
       {/* Programs Preview Section */}
-      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px]">
+      <section className="flex flex-col w-full bg-transparent py-16 px-6 md:py-[100px] md:px-[120px] gap-12 md:gap-[48px] relative">
         <SectionHeader
           label="PROGRAMS"
           title={"OUR INITIATIVES."}
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
-          {programs.map((prog, i) => (
-            <div key={prog.title} className="flex flex-col gap-6 p-8 md:p-[32px] xl:p-[40px] min-w-0 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] transition-colors group">
-              <div className="flex items-center justify-between">
-                <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
-                  [0{i + 1}]
-                </span>
-                <Link href={prog.href} className="w-[32px] h-[32px] rounded-full border border-[#3D3D3D] group-hover:border-[#A855F7] flex items-center justify-center transition-colors">
-                  <span className="font-grotesk text-[14px] text-[#888888] group-hover:text-[#A855F7] transition-colors">→</span>
-                </Link>
-              </div>
-              
-              <h3 className="font-grotesk text-[20px] xl:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15] break-words">
-                {prog.title}
-              </h3>
-              
-              <p className="font-ibm-mono text-[12px] text-[#888888] tracking-[0.5px] leading-[1.7] line-clamp-4 break-words">
-                {prog.description}
-              </p>
-              
-              <div className="mt-auto pt-4">
-                <Link href={prog.href} className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px] hover:underline">
-                  READ MORE &gt;
-                </Link>
-              </div>
-            </div>
-          ))}
+        <div className="w-full pt-8">
+          <ProgramsStack />
         </div>
       </section>
 
@@ -116,17 +98,22 @@ export default function AboutPage() {
       <TeamGrid />
 
       {/* CTA Section */}
-      <section className="flex flex-col items-center w-full bg-transparent py-16 px-6 md:p-[120px] gap-10 md:gap-[48px] border-t border-white/[0.08]">
-        <h2 className="font-grotesk text-[clamp(28px,6vw,56px)] font-bold text-[#F5F5F0] tracking-[-2px] leading-none text-center w-full max-w-[800px] break-words">
+      <section className="flex flex-col items-center justify-center w-full bg-transparent py-24 px-6 md:py-[160px] md:px-[120px] gap-10 md:gap-[48px] relative overflow-hidden">
+        {/* Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#A855F7]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+        <h2 className="font-grotesk text-[clamp(32px,6vw,64px)] font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-[#888] tracking-[-2px] leading-[1.1] text-center w-full max-w-[900px] break-words drop-shadow-xl">
           BRIGHT FUTURE THAT WE CHERISH. WE THRIVE FOR SUCCESS.
         </h2>
+        
         <a
           href={JOIN_FORM}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-full sm:w-[220px] h-[64px] bg-[#A855F7] hover:bg-[#9333EA] transition-colors"
+          className="group relative flex items-center justify-center w-full sm:w-[240px] h-[64px] rounded-full bg-[#F5F5F0] hover:bg-white transition-all duration-300 shadow-[0_0_40px_rgba(245,245,240,0.1)] hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] hover:scale-105"
         >
-          <span className="font-grotesk text-[13px] font-bold text-white tracking-[2px]">
+          <span className="font-grotesk text-[14px] font-bold text-[#0A0A0A] tracking-[2px]">
             JOIN US
           </span>
         </a>

@@ -33,7 +33,7 @@ export default function WhatWeDo() {
       <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-16 lg:gap-8 mt-8 relative">
         {/* Left Side: Image (Static/Sticky while scrolling the section) */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:sticky lg:top-[120px]">
-          <div className="relative w-full max-w-[460px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(168,85,247,0.15)]">
+          <div className="relative w-full max-w-[520px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(168,85,247,0.15)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/_DSC0084.jpg"
@@ -46,9 +46,9 @@ export default function WhatWeDo() {
         </div>
 
         {/* Right Side: Tilted Scrollable Card (Device Frame) */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end [perspective:1400px]">
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end [perspective:1600px]">
           {/* Outer Frame (Simulates tablet body) */}
-          <div className="relative w-full max-w-[480px] h-[550px] lg:h-[650px] bg-[#d4d4d8] rounded-[2rem] p-[8px] shadow-[30px_20px_60px_rgba(0,0,0,0.8)] transition-transform duration-700 hover:[transform:rotateY(-15deg)_rotateX(3deg)] [transform:rotateY(-30deg)_rotateX(8deg)] origin-center group">
+          <div className="relative w-full max-w-[600px] h-[650px] lg:h-[750px] bg-[#d4d4d8] rounded-[2rem] p-[10px] shadow-[30px_20px_60px_rgba(0,0,0,0.8)] transition-transform duration-700 hover:[transform:rotateY(-10deg)_rotateX(2deg)] [transform:rotateY(-25deg)_rotateX(6deg)] origin-center group">
             {/* Outer metallic edge highlight */}
             <div className="absolute inset-0 rounded-[2rem] border-[2px] border-white/60 pointer-events-none" />
             

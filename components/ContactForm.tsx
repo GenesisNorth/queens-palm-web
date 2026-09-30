@@ -28,11 +28,11 @@ export default function ContactForm() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const inputClass = "w-full h-[56px] px-4 bg-white/[0.02] backdrop-blur-md border border-white/[0.08] font-ibm-mono text-[13px] text-[#F5F5F0] placeholder:text-[#888] outline-none focus:border-[#A855F7] transition-colors";
+  const inputClass = "w-full h-[56px] px-6 bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-2xl font-ibm-mono text-[13px] text-[#F5F5F0] placeholder:text-[#666] outline-none focus:border-[#A855F7]/80 focus:bg-white/[0.06] transition-all duration-300";
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
         <input
           type="text"
           name="name"
@@ -53,7 +53,7 @@ export default function ContactForm() {
         />
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
         <input
           type="tel"
           name="phone"
@@ -62,18 +62,24 @@ export default function ContactForm() {
           onChange={handleChange}
           className={inputClass}
         />
-        <select
-          name="inquiry"
-          value={formData.inquiry}
-          onChange={handleChange}
-          className={`${inputClass} appearance-none cursor-pointer bg-transparent`}
-          style={{ backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23A855F7%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center', backgroundSize: '10px' }}
-        >
-          <option value="General Information">GENERAL INFORMATION</option>
-          <option value="Partnerships & Collaboration">PARTNERSHIPS & COLLABORATION</option>
-          <option value="Volunteer / Careers">VOLUNTEER / CAREERS</option>
-          <option value="Speaking & Workshop Requests">SPEAKING & WORKSHOP REQUESTS</option>
-        </select>
+        <div className="relative w-full">
+          <select
+            name="inquiry"
+            value={formData.inquiry}
+            onChange={handleChange}
+            className={`${inputClass} appearance-none cursor-pointer pr-12`}
+          >
+            <option value="General Information" className="bg-[#111] text-white">GENERAL INFORMATION</option>
+            <option value="Partnerships & Collaboration" className="bg-[#111] text-white">PARTNERSHIPS & COLLABORATION</option>
+            <option value="Volunteer / Careers" className="bg-[#111] text-white">VOLUNTEER / CAREERS</option>
+            <option value="Speaking & Workshop Requests" className="bg-[#111] text-white">SPEAKING & WORKSHOP REQUESTS</option>
+          </select>
+          <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-[#A855F7]">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </div>
+        </div>
       </div>
 
       <textarea
@@ -82,14 +88,14 @@ export default function ContactForm() {
         required
         value={formData.message}
         onChange={handleChange}
-        className={`${inputClass} min-h-[160px] py-4 resize-y`}
+        className={`${inputClass} min-h-[180px] py-6 resize-none`}
       />
 
       <button
         type="submit"
-        className="w-full h-[64px] bg-[#A855F7] hover:bg-[#9333EA] transition-colors mt-2"
+        className="w-full h-[64px] bg-[#F5F5F0] hover:bg-[#A855F7] hover:text-white rounded-2xl transition-all duration-300 mt-2 shadow-[0_0_30px_rgba(245,245,240,0.1)] hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] hover:-translate-y-1"
       >
-        <span className="font-grotesk text-[14px] font-bold text-white tracking-[2px]">
+        <span className="font-grotesk text-[14px] font-bold text-[#0A0A0A] group-hover:text-white tracking-[2px] transition-colors">
           SEND MESSAGE
         </span>
       </button>

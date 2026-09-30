@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
 import Services from "@/components/Services";
+import ProgramsStack from "@/components/ProgramsStack";
 
 const programs = [
   {
@@ -41,25 +42,8 @@ export default function ProgramsPage() {
           subtitle="EXPLORE OUR COMPREHENSIVE TRAINING PROGRAMS DESIGNED TO EQUIP YOU WITH THE ESSENTIAL SOFT SKILLS FOR SUCCESS."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
-          {programs.map((prog, i) => (
-            <div key={prog.title} className="flex flex-col gap-6 p-8 md:p-[32px] xl:p-[40px] min-w-0 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] hover:bg-white/[0.05] transition-colors group">
-              <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
-                [{prog.tag}]
-              </span>
-              <h3 className="font-grotesk text-[20px] xl:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-[1.15] break-words">
-                {prog.title}
-              </h3>
-              <p className="font-ibm-mono text-[12px] text-[#888888] tracking-[0.5px] leading-[1.7] break-words">
-                {prog.description}
-              </p>
-              <div className="mt-auto pt-4">
-                <Link href={prog.href} className="flex items-center gap-2 font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px] hover:underline">
-                  EXPLORE PROGRAM <span className="text-[14px] leading-none">→</span>
-                </Link>
-              </div>
-            </div>
-          ))}
+        <div className="w-full pt-8">
+          <ProgramsStack />
         </div>
       </section>
 

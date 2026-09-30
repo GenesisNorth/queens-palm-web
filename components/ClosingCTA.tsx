@@ -26,22 +26,23 @@ export default function ClosingCTA() {
         WE JUST NEED A COUPLE OF HOURS!
       </p>
 
-      {/* CTAs */}
-      <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-[16px] w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-[16px] w-full sm:w-auto">
         <a
           href="tel:+2348169105349"
-          className="flex items-center justify-center w-full sm:w-[260px] h-[64px] bg-[#A855F7] hover:bg-[#9333EA] transition-colors"
+          className="group relative flex items-center justify-center w-full sm:w-[260px] h-[64px] rounded-full bg-[#F5F5F0] hover:bg-white transition-all duration-300 shadow-[0_0_40px_rgba(245,245,240,0.1)] hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] hover:scale-105"
         >
-          <span className="font-grotesk text-[13px] font-bold text-white tracking-[2px]">
+          <span className="font-grotesk text-[14px] font-bold text-[#0A0A0A] tracking-[2px]">
             +234 816 910 5349
           </span>
+          <div className="absolute inset-0 rounded-full border border-black/10 pointer-events-none" />
         </a>
+        
         <a
           href="/contact"
-          className="flex items-center justify-center w-full sm:w-[220px] h-[64px] bg-white/[0.02] backdrop-blur-md border border-white/[0.08] hover:border-white/[0.2] transition-colors shadow-lg"
+          className="group flex items-center justify-center w-full sm:w-[240px] h-[64px] rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/[0.1] hover:bg-white/[0.08] hover:border-[#A855F7]/50 transition-all duration-300 hover:scale-105"
         >
-          <span className="font-ibm-mono text-[12px] text-[#666666] tracking-[2px]">
-            CONTACT PAGE &gt;
+          <span className="font-ibm-mono text-[13px] text-[#CCCCCC] group-hover:text-white tracking-[2px] transition-colors">
+            CONTACT PAGE
           </span>
         </a>
       </div>
