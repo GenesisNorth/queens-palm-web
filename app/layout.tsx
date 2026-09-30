@@ -50,7 +50,7 @@ export default function RootLayout({
             
             {/* Wave Pattern Overlay */}
             <div 
-              className="fixed inset-0 pointer-events-none -z-10 animate-wave-flow will-change-transform [transform:translateZ(0)]"
+              className="fixed inset-0 pointer-events-none -z-10 will-change-transform [transform:translateZ(0)]"
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10 Q 30 30 10 30 Q 30 30 30 50 Q 30 30 50 30 Q 30 30 30 10 Z' fill='%23A855F7' fill-opacity='0.08'/%3E%3Cpath d='M90 60 Q 90 75 75 75 Q 90 75 90 90 Q 90 75 105 75 Q 90 75 90 60 Z' fill='%23A855F7' fill-opacity='0.06'/%3E%3Cpath d='M40 80 Q 40 90 30 90 Q 40 90 40 100 Q 40 90 50 90 Q 40 90 40 80 Z' fill='%23A855F7' fill-opacity='0.05'/%3E%3Cpath d='M95 15 Q 95 22 88 22 Q 95 22 95 29 Q 95 22 102 22 Q 95 22 95 15 Z' fill='%23A855F7' fill-opacity='0.07'/%3E%3Ccircle cx='70' cy='30' r='1.5' fill='%23A855F7' fill-opacity='0.08'/%3E%3Ccircle cx='20' cy='80' r='1' fill='%23A855F7' fill-opacity='0.05'/%3E%3Ccircle cx='60' cy='100' r='2' fill='%23A855F7' fill-opacity='0.04'/%3E%3C/svg%3E")`,
               }}
