@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const images = [
   { src: "/images/_DSC0034.jpg", label: "OUTREACH" },
@@ -234,12 +235,11 @@ export default function CoverflowGallery() {
               className={`group absolute w-[15.5vw] min-w-[104px] max-w-[210px] aspect-[3/4] cursor-pointer will-change-transform [backface-visibility:hidden] transition-[filter] duration-300 ${i % 2 ? "hidden sm:block" : ""}`}
             >
               <div className="relative w-full h-full overflow-hidden rounded-[8px] border border-white/[0.12] group-hover:border-[#A855F7] bg-[#0A0A0A] shadow-[0_18px_46px_rgba(0,0,0,0.55)] transition-[border-color,box-shadow] duration-500">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={img.src}
                   alt={`QPSI — ${img.label.toLowerCase()}`}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </div>
             </div>

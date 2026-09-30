@@ -30,10 +30,27 @@ const programs = [
 ];
 
 export default function ProgramsStack() {
+  // Duplicate for seamless infinite scrolling
+  const duplicatedPrograms = [...programs, ...programs];
+
   return (
-    <div className="w-full flex justify-start lg:justify-center overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden py-16 px-4 md:px-8 [perspective:1600px]">
-      <div className="flex flex-row items-center gap-6 md:gap-10">
-        {programs.map((prog, index) => (
+    <div className="relative w-full flex justify-start overflow-hidden py-16 px-4 md:px-8 [perspective:1600px]">
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes autoScrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 1.25rem)); } /* -50% minus half the gap (gap-10 = 2.5rem, half = 1.25rem) */
+        }
+        .animate-scrollLeft {
+          animation: autoScrollLeft 40s linear infinite;
+        }
+      `}} />
+
+      {/* Fade edges for a premium look */}
+      <div className="absolute left-0 top-0 bottom-0 w-[100px] bg-gradient-to-r from-[#0A0A0A] to-transparent z-20 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-[100px] bg-gradient-to-l from-[#0A0A0A] to-transparent z-20 pointer-events-none" />
+
+      <div className="flex flex-row items-center gap-6 md:gap-10 w-max animate-scrollLeft hover:[animation-play-state:paused]">
+        {duplicatedPrograms.map((prog, index) => (
           <div 
             key={index}
             className="relative w-[320px] lg:w-[400px] h-[480px] lg:h-[600px] shrink-0 bg-[#d4d4d8] rounded-[2rem] p-[8px] md:p-[10px] shadow-[20px_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 hover:[transform:rotateY(-5deg)_rotateX(2deg)] [transform:rotateY(-20deg)_rotateX(5deg)] origin-center group"
@@ -47,7 +64,7 @@ export default function ProgramsStack() {
               {/* Top Status/Header bar */}
               <div className="shrink-0 p-5 md:p-6 pb-4 border-b border-white/[0.06] flex items-center justify-between z-10 bg-[#070707]/90 backdrop-blur-md">
                 <span className="font-ibm-mono text-[9px] md:text-[10px] font-bold text-[#A855F7] tracking-[2px]">
-                  0{index + 1} // {prog.tag}
+                  0{(index % programs.length) + 1} // {prog.tag}
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#A855F7] animate-pulse" />
               </div>

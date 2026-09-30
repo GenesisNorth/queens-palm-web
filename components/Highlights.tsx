@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState, useRef } from "react";
 import SectionHeader from "./SectionHeader";
 
@@ -150,11 +152,11 @@ function HighlightRow({ h, i, isActive, onMouseEnter }: any) {
                 className="absolute inset-0 w-full h-full"
                 style={{ transform: "translateZ(20px)" }} // Pops image slightly
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
+                <Image 
                   src={h.image} 
                   alt={h.title} 
-                  className="w-full h-full object-cover opacity-90"
+                  fill
+                  className="object-cover opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import SectionHeader from "./SectionHeader";
 const whatWeDoContent = [
   {
@@ -34,11 +36,11 @@ export default function WhatWeDo() {
         {/* Left Side: Image (Static/Sticky while scrolling the section) */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:sticky lg:top-[120px]">
           <div className="relative w-full max-w-[520px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(168,85,247,0.15)]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/_DSC0084.jpg"
               alt="What we do"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
             {/* Soft gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

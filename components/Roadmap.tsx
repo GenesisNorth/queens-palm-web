@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useEffect, useRef, useState } from "react";
 import SectionHeader from "./SectionHeader";
 
@@ -217,11 +219,11 @@ export default function Roadmap() {
                         style={{ ...layerVars(layer, dir), zIndex: 10 - layer }}
                       >
                         {deck[layer] && (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
+                          <Image
                             src={deck[layer]}
                             alt=""
-                            className="absolute inset-0 w-full h-full object-cover opacity-45"
+                            fill
+                            className="object-cover opacity-45"
                           />
                         )}
                         <div className="absolute inset-0 bg-[#0A0A0A]/55" />
@@ -236,11 +238,11 @@ export default function Roadmap() {
                       <div className="absolute inset-0 z-0 pointer-events-none">
                         <div className="absolute inset-0 bg-[#0A0A0A]/70 group-hover:bg-[#0A0A0A]/60 transition-colors duration-700 z-10" />
                         {deck[0] && (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
+                          <Image
                             src={deck[0]}
                             alt={node.year}
-                            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
+                            fill
+                            className="object-cover opacity-50 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
                           />
                         )}
                       </div>
