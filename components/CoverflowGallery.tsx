@@ -44,6 +44,19 @@ export default function CoverflowGallery() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let raf = 0;
     let last = performance.now();
+    let isVisible = false;
+
+    // Only run the animation loop when the section is visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible && !raf) {
+          last = performance.now();
+          raf = requestAnimationFrame(frame);
+        }
+      },
+      { rootMargin: "100px" }
+    );
 
     const frame = (now: number) => {
       const dt = Math.min(64, now - last) / 1000;
@@ -152,11 +165,20 @@ export default function CoverflowGallery() {
       }
 
       setFront((p) => (p === frontIdx ? p : frontIdx));
-      raf = requestAnimationFrame(frame);
+
+      // Only continue the loop if the component is visible
+      if (isVisible) {
+        raf = requestAnimationFrame(frame);
+      } else {
+        raf = 0;
+      }
     };
 
-    raf = requestAnimationFrame(frame);
-    return () => cancelAnimationFrame(raf);
+    observer.observe(wrap);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (

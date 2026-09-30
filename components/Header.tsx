@@ -31,7 +31,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 will-change-transform [transform:translateZ(0)]">
       {/* Announcement bar */}
       <div className="flex items-center justify-center w-full h-[36px] bg-[#A855F7] px-4">
         <a

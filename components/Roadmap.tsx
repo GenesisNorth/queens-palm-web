@@ -97,6 +97,7 @@ export default function Roadmap() {
     if (!el) return;
 
     let raf = 0;
+    let lastP = -1;
     const measure = () => {
       raf = 0;
       const rect = el.getBoundingClientRect();
@@ -104,15 +105,20 @@ export default function Roadmap() {
 
       // The "playhead" sits a little above the middle of the viewport.
       const anchor = window.innerHeight * 0.55;
-      const p = (anchor - rect.top) / rect.height;
-      setProgress(Math.min(1, Math.max(0, p)));
+      const p = Math.min(1, Math.max(0, (anchor - rect.top) / rect.height));
 
-      // Where each node dot sits along the track, as a 0-1 fraction
-      setNodeStops(
-        nodeRefs.current.map((n) =>
-          n ? (n.offsetTop + n.offsetHeight / 2) / el.offsetHeight : 1
-        )
-      );
+      // Only update state if progress changed meaningfully (avoid re-renders)
+      if (Math.abs(p - lastP) > 0.005) {
+        lastP = p;
+        setProgress(p);
+
+        // Where each node dot sits along the track, as a 0-1 fraction
+        setNodeStops(
+          nodeRefs.current.map((n) =>
+            n ? (n.offsetTop + n.offsetHeight / 2) / el.offsetHeight : 1
+          )
+        );
+      }
     };
 
     const onScroll = () => {
