@@ -90,18 +90,14 @@ export default function CoverflowGallery() {
       const rx = Math.max(cardW * 0.62, Math.min(Math.max(w * 0.34, minRx), maxRx));
       const ry = Math.max(cardH * 0.62, Math.min(Math.max(h * 0.3, minRy), maxRy));
 
-      const holding = hoverRef.current !== null;
-      if (!reduced && !holding) spinRef.current += dt * 0.022;
+      if (!reduced) spinRef.current += dt * 0.022;
 
-      // Ease between the tight ring and the bloomed hover arrangement
-      bloomRef.current += ((holding ? 1 : 0) - bloomRef.current) * Math.min(1, dt * 5);
-      const b = bloomRef.current;
+      // Bloom pushes the ring outward
+      bloomRef.current = 0; // Disable bloom entirely
+      const b = 0;
 
-      // How large a hovered photo grows, capped so it always stays on stage
-      const zoomScale = Math.max(
-        1.25,
-        Math.min(2.5, (h * 0.86) / cardH, (w * 0.62) / cardW)
-      );
+      // Disable zooming
+      const zoomScale = 1;
 
       let frontIdx = 0;
       let frontZ = -Infinity;
@@ -117,7 +113,7 @@ export default function CoverflowGallery() {
         const depth = -Math.cos(a);                 // -1 (back) .. 1 (front)
 
         // Ease this card's zoom toward 1 while hovered, back to 0 when not
-        const want = hoverRef.current === i ? 1 : 0;
+        const want = 0; // Disable lift
         liftRef.current[i] += (want - liftRef.current[i]) * Math.min(1, dt * 6);
         const L = liftRef.current[i];
         if (L > maxLift) maxLift = L;
@@ -190,7 +186,6 @@ export default function CoverflowGallery() {
         ref={wrapRef}
         className="relative w-full h-[620px] sm:h-[720px] md:h-[860px] lg:h-[980px]"
         style={{ perspective: `${PERSP}px` }}
-        onPointerLeave={() => { hoverRef.current = null; }}
       >
         {/* ---- The words inside the ring ---- */}
         <div className="absolute inset-0 z-[600] flex items-center justify-center pointer-events-none px-6">
@@ -236,13 +231,9 @@ export default function CoverflowGallery() {
             <div
               key={img.src}
               ref={(el) => { cardRefs.current[i] = el; }}
-              onPointerEnter={() => { hoverRef.current = i; }}
-              onMouseEnter={() => { hoverRef.current = i; }}
-              onPointerLeave={() => { if (hoverRef.current === i) hoverRef.current = null; }}
-              onMouseLeave={() => { if (hoverRef.current === i) hoverRef.current = null; }}
               className={`group absolute w-[15.5vw] min-w-[104px] max-w-[210px] aspect-[3/4] cursor-pointer will-change-transform [backface-visibility:hidden] transition-[filter] duration-300 ${i % 2 ? "hidden sm:block" : ""}`}
             >
-              <div className="relative w-full h-full overflow-hidden rounded-[8px] border border-white/[0.12] group-hover:border-[#A855F7] bg-[#0A0A0A] shadow-[0_18px_46px_rgba(0,0,0,0.55)] group-hover:shadow-[0_0_38px_rgba(168,85,247,0.5)] transition-[border-color,box-shadow] duration-500">
+              <div className="relative w-full h-full overflow-hidden rounded-[8px] border border-white/[0.12] group-hover:border-[#A855F7] bg-[#0A0A0A] shadow-[0_18px_46px_rgba(0,0,0,0.55)] transition-[border-color,box-shadow] duration-500">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img.src}
@@ -255,11 +246,6 @@ export default function CoverflowGallery() {
           ))}
         </div>
       </div>
-
-      <p className="text-center font-ibm-mono text-[10px] md:text-[11px] text-[#555555] tracking-[2px] mt-6 px-6">
-        <span className="hidden lg:inline">HOVER A PHOTO TO HOLD THE CIRCLE</span>
-        <span className="lg:hidden">TAP A PHOTO TO BRING IT FORWARD</span>
-      </p>
     </section>
   );
 }
