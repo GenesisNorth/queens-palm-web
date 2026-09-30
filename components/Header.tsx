@@ -32,18 +32,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 will-change-transform [transform:translateZ(0)]">
-      {/* Announcement bar */}
-      <div className="flex items-center justify-center w-full h-[36px] bg-[#A855F7] px-4">
-        <a
-          href={JOIN_FORM}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-ibm-mono text-[10px] md:text-[11px] font-bold text-white tracking-[1px] md:tracking-[2px] hover:underline text-center"
-        >
-          ARE YOU DRIVEN AND MOTIVATED TO BE THE BEST? JOIN QPSI NOW! →
-        </a>
-      </div>
-
       {/* Floating Pill Wrapper */}
       <div className="w-full px-4 md:px-8 mt-4 md:mt-6 flex justify-center pointer-events-none">
         <div

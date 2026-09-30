@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import GlitchText from "@/components/GlitchText";
 
 const JOIN_FORM = "https://forms.gle/fVccqtCVDxbuGPGw6";
 
@@ -69,8 +68,11 @@ export default function HeroSlider() {
         )}
 
         {/* Massive Typography Heading */}
-        <h1 className="font-grotesk text-[clamp(40px,9vw,110px)] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#A0A0A0] tracking-[-2px] md:tracking-[-4px] leading-[0.95] text-center w-full whitespace-pre-line drop-shadow-2xl">
-          <GlitchText text={slide.heading} speed={35} delay={100} key={`h-${active}`} />
+        <h1 
+          className="font-grotesk text-[clamp(40px,9vw,110px)] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#A0A0A0] tracking-[-2px] md:tracking-[-4px] leading-[0.95] text-center w-full whitespace-pre-line drop-shadow-2xl"
+          key={`h-${active}`}
+        >
+          {slide.heading}
         </h1>
 
         {/* Elevated Subheading */}
