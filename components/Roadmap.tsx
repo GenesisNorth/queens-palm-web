@@ -79,6 +79,18 @@ export default function Roadmap() {
     );
   }, []);
 
+  const handleDeckClick = (index: number) => {
+    setDecks((prev) => {
+      const next = [...prev];
+      const deck = [...next[index]];
+      if (deck.length > 0) {
+        deck.push(deck.shift()!);
+        next[index] = deck;
+      }
+      return next;
+    });
+  };
+
   // Drive the travelling marker from scroll position
   useEffect(() => {
     const el = trackRef.current;
@@ -188,6 +200,7 @@ export default function Roadmap() {
                   <div
                     className="group relative w-full cursor-pointer animate-float motion-reduce:animate-none"
                     style={{ animationDelay: `${i * 1.5}s` }}
+                    onClick={() => handleDeckClick(i)}
                   >
                     {/* Back layers — decorative photos peeking out of the deck */}
                     {[2, 1].map((layer) => (
@@ -214,14 +227,14 @@ export default function Roadmap() {
                       className="relative z-20 w-full overflow-hidden bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] group-hover:border-[#A855F7] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] group-hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] transition-all duration-700 ease-out will-change-transform [transform:var(--tr)] group-hover:[transform:var(--tr-h)] motion-reduce:transition-none"
                       style={layerVars(0, dir)}
                     >
-                      <div className="absolute inset-0 z-0">
-                        <div className="absolute inset-0 bg-[#0A0A0A]/70 group-hover:bg-[#0A0A0A]/20 transition-colors duration-700 z-10" />
+                      <div className="absolute inset-0 z-0 pointer-events-none">
+                        <div className="absolute inset-0 bg-[#0A0A0A]/70 group-hover:bg-[#0A0A0A]/60 transition-colors duration-700 z-10" />
                         {deck[0] && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
                             src={deck[0]}
                             alt={node.year}
-                            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-700"
+                            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
                           />
                         )}
                       </div>
@@ -230,9 +243,6 @@ export default function Roadmap() {
                         <div className="flex items-center gap-3 mb-3">
                           <span className="font-ibm-mono text-[10px] md:text-[12px] font-bold text-white tracking-[2px] bg-[#A855F7] px-3 py-1 shadow-[0_0_10px_rgba(168,85,247,0.5)]">
                             {node.year}
-                          </span>
-                          <span className="font-ibm-mono text-[10px] text-white/70 tracking-[1.5px]">
-                            {IMAGES_PER_NODE} PHOTOS
                           </span>
                         </div>
                         <h3 className="font-grotesk text-[20px] md:text-[28px] font-bold text-white tracking-[-0.5px] leading-tight mb-3 group-hover:text-[#A855F7] transition-colors duration-300 drop-shadow-md break-words">

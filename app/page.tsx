@@ -1,5 +1,5 @@
 import HeroSlider from "@/components/HeroSlider";
-import DiagonalCarousel from "@/components/DiagonalCarousel";
+import CoverflowGallery from "@/components/CoverflowGallery";
 import AboutPreview from "@/components/AboutPreview";
 import WhatWeDo from "@/components/WhatWeDo";
 import Services from "@/components/Services";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="flex flex-col w-full bg-transparent pt-[96px] relative z-10">
       <HeroSlider />
-      <DiagonalCarousel />
+      <CoverflowGallery />
       <AboutPreview />
       <WhatWeDo />
       <Services />
