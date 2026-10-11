@@ -11,7 +11,7 @@ export default function AboutPreview() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-[2px]">
         {/* About body */}
-        <div className="flex flex-col gap-6 p-8 md:p-[32px] xl:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col gap-6 p-8 md:p-[32px] xl:p-[40px] bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
           <p className="font-ibm-mono text-[12px] md:text-[13px] text-[#AAAAAA] tracking-[0.5px] leading-[1.8]">
             We take this a step further by empowering young people, regardless of
             background, with essential soft skills that are critical for success in
@@ -32,7 +32,7 @@ export default function AboutPreview() {
         </div>
 
         {/* Mission */}
-        <div className="flex flex-col gap-5 p-8 md:p-[32px] xl:p-[40px] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+        <div className="flex flex-col gap-5 p-8 md:p-[32px] xl:p-[40px] bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] w-full min-w-0 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
           <span className="font-ibm-mono text-[11px] font-bold text-[#7C3AED] tracking-[2px]">
             OUR MISSION
           </span>

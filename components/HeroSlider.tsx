@@ -56,7 +56,7 @@ export default function HeroSlider() {
       >
         {/* Floating Glass Pill (Eyebrow) */}
         {slide.eyebrow && (
-          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] backdrop-blur-md border border-white/[0.1] shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
+          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] backdrop-blur-sm border border-white/[0.1] shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A855F7] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#A855F7]"></span>
@@ -97,7 +97,7 @@ export default function HeroSlider() {
             
             <a
               href="/about"
-              className="group flex items-center justify-center w-full sm:w-[240px] h-[60px] rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/[0.1] hover:bg-white/[0.08] hover:border-[#A855F7]/50 transition-all duration-300 hover:scale-105"
+              className="group flex items-center justify-center w-full sm:w-[240px] h-[60px] rounded-full bg-white/[0.03] backdrop-blur-sm border border-white/[0.1] hover:bg-white/[0.08] hover:border-[#A855F7]/50 transition-all duration-300 hover:scale-105"
             >
               <span className="font-ibm-mono text-[13px] text-[#CCCCCC] group-hover:text-white tracking-[2px] transition-colors">
                 LEARN MORE

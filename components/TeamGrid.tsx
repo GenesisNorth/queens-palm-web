@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 
 const placeholders = [
@@ -18,12 +19,13 @@ export default function TeamGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
         {placeholders.map((member) => (
           <div key={member.id} className="flex flex-col gap-4 min-w-0">
-            <div className="w-full aspect-[3/4] bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center justify-center gap-2 overflow-hidden relative group">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="w-full aspect-[3/4] bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] flex flex-col items-center justify-center gap-2 overflow-hidden relative group">
+              <Image
                 src={member.image}
                 alt={member.name}
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
               />
             </div>
             

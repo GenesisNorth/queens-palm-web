@@ -15,7 +15,7 @@ export default function Stats() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="flex flex-col gap-2 items-center justify-center py-8 px-4 min-w-0 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] w-full rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+            className="flex flex-col gap-2 items-center justify-center py-8 px-4 min-w-0 bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] w-full rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
           >
             <span className="font-grotesk text-[40px] md:text-[64px] font-bold text-white tracking-[-2px] leading-none">
               {stat.value}

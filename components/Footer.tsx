@@ -38,7 +38,7 @@ export default function Footer() {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 pt-16 lg:pt-32 relative z-10 flex justify-center">
-      <footer className="flex flex-col w-full max-w-[1400px] bg-[#0A0A0A]/70 backdrop-blur-2xl border border-white/[0.06] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+      <footer className="flex flex-col w-full max-w-[1400px] bg-[#0A0A0A]/70 backdrop-blur-sm border border-white/[0.06] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
         {/* Top */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-[40px] xl:gap-[56px] px-8 md:px-[64px] xl:px-[80px] py-12 md:py-[64px] relative">
           
@@ -67,10 +67,10 @@ export default function Footer() {
                 +234 816 910 5349
               </a>
               <a
-                href="mailto:contact@queenspalmsi.com"
+                href="mailto:queenspalmsi@gmail.com"
                 className="font-ibm-mono text-[11px] text-[#888888] tracking-[1px] hover:text-[#A855F7] transition-colors break-all"
               >
-                CONTACT@QUEENSPALMSI.COM
+                queenspalmsi@gmail.com
               </a>
               <span className="font-ibm-mono text-[11px] text-[#555555] tracking-[1px] leading-[1.6]">
                 11 JIMOH SOBOWALE ST, MAGODO PHASE 1, ISHERI, LAGOS

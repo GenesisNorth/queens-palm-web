@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import GlitchText from "@/components/GlitchText";
 
@@ -18,15 +19,14 @@ export default function ArticlePage() {
         </h1>
         
         {/* Cover Image */}
-        <div className="w-full max-w-[900px] aspect-[16/9] mt-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+        <div className="w-full max-w-[900px] aspect-[16/9] mt-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative overflow-hidden">
+          <Image
             src="/images/_DSC0138.jpg"
-            alt="Crowd"
-            className="absolute inset-0 w-full h-full object-cover opacity-80"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.opacity = '0';
-            }}
+            alt="Audience at a QPSI event"
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 900px"
+            className="object-cover opacity-80"
           />
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function ArticlePage() {
               { title: "9. Time Management & Prioritization", desc: "Your time is precious, Queen. Use it with intention." },
               { title: "10. Cultural Intelligence", desc: "Understanding and respecting different backgrounds makes you a more powerful force for change." }
             ].map(item => (
-              <div key={item.title} className="flex flex-col gap-3 p-6 md:p-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border-l-4 border-l-[#A855F7]">
+              <div key={item.title} className="flex flex-col gap-3 p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border-l-4 border-l-[#A855F7]">
                 <h4 className="font-grotesk text-[20px] font-bold text-[#F5F5F0]">{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

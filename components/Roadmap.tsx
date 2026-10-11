@@ -113,26 +113,34 @@ export default function Roadmap() {
       if (Math.abs(p - lastP) > 0.005) {
         lastP = p;
         setProgress(p);
-
-        // Where each node dot sits along the track, as a 0-1 fraction
-        setNodeStops(
-          nodeRefs.current.map((n) =>
-            n ? (n.offsetTop + n.offsetHeight / 2) / el.offsetHeight : 1
-          )
-        );
       }
+    };
+
+    // Node positions only move on resize, so keep the layout reads out of the
+    // scroll path — reading offsetTop while scrolling forces a sync reflow.
+    const measureStops = () => {
+      setNodeStops(
+        nodeRefs.current.map((n) =>
+          n ? (n.offsetTop + n.offsetHeight / 2) / el.offsetHeight : 1
+        )
+      );
     };
 
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(measure);
     };
+    const onResize = () => {
+      measureStops();
+      onScroll();
+    };
 
     measure();
+    measureStops();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("resize", onResize);
     return () => {
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("resize", onResize);
       if (raf) cancelAnimationFrame(raf);
     };
   }, [decks.length]);
@@ -223,6 +231,7 @@ export default function Roadmap() {
                             src={deck[layer]}
                             alt=""
                             fill
+                            sizes="(max-width: 1024px) 90vw, 420px"
                             className="object-cover opacity-45"
                           />
                         )}
@@ -232,7 +241,7 @@ export default function Roadmap() {
 
                     {/* Front card — carries the copy */}
                     <div
-                      className="relative z-20 w-full overflow-hidden bg-white/[0.02] backdrop-blur-xl border border-white/[0.1] group-hover:border-[#A855F7] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] group-hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] transition-all duration-700 ease-out will-change-transform [transform:var(--tr)] group-hover:[transform:var(--tr-h)] motion-reduce:transition-none"
+                      className="relative z-20 w-full overflow-hidden bg-white/[0.02] backdrop-blur-sm border border-white/[0.1] group-hover:border-[#A855F7] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] group-hover:shadow-[0_0_40px_rgba(168,85,247,0.4)] transition-all duration-700 ease-out will-change-transform [transform:var(--tr)] group-hover:[transform:var(--tr-h)] motion-reduce:transition-none"
                       style={layerVars(0, dir)}
                     >
                       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -242,6 +251,7 @@ export default function Roadmap() {
                             src={deck[0]}
                             alt={node.year}
                             fill
+                            sizes="(max-width: 1024px) 90vw, 420px"
                             className="object-cover opacity-50 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
                           />
                         )}

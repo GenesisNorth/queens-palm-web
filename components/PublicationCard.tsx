@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 interface PublicationCardProps {
@@ -12,19 +13,17 @@ interface PublicationCardProps {
 
 export default function PublicationCard({ title, excerpt, category, image, href }: PublicationCardProps) {
   return (
-    <div className="flex flex-col w-full bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] hover:border-[#A855F7] transition-colors group h-full shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+    <div className="flex flex-col w-full bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] hover:border-[#A855F7] transition-colors group h-full shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
       <div className="relative w-full aspect-[16/9] bg-white/[0.01] overflow-hidden border-b border-white/[0.08]">
         <div className="absolute inset-0 opacity-10 flex items-center justify-center font-ibm-mono text-[#A855F7]">
           [COVER IMAGE]
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={image}
           alt={title}
-          className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.opacity = '0';
-          }}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
         />
         {/* Category Badge */}
         <div className="absolute top-4 left-4 flex items-center justify-center h-[28px] px-[12px] bg-[#A855F7]">

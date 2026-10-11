@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,18 +17,43 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "700"],
 });
 
+const SITE = "https://queenspalmsi.org";
+
 export const metadata: Metadata = {
-  title: "Queens Palm Support Initiative — Empowering Young Minds",
+  // Lets every page supply just its own title; the suffix is appended here.
+  metadataBase: new URL(SITE),
+  title: {
+    default: "Queens Palm Support Initiative — Empowering Young Minds",
+    template: "%s | Queens Palm Support Initiative",
+  },
   description:
     "QPSI empowers young people with essential soft skills that are timeless and invaluable for success in life and career. Aligned with UN SDG 4.",
+  keywords: [
+    "QPSI", "Queens Palm Support Initiative", "soft skills", "youth empowerment",
+    "mentorship", "leadership development", "Nigeria", "SDG 4",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Queens Palm Support Initiative",
     description:
       "Empowering young individuals with essential soft skills for success in life and career.",
-    url: "https://queenspalmsi.org",
+    url: SITE,
     siteName: "Queens Palm Support Initiative",
+    locale: "en_NG",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Queens Palm Support Initiative",
+    description:
+      "Empowering young individuals with essential soft skills for success in life and career.",
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0A0A0A",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

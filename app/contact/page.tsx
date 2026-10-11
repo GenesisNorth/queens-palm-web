@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Queens Palm Support Initiative for partnerships, speaking requests, volunteering or general enquiries.",
+};
+
 import SectionHeader from "@/components/SectionHeader";
 import ContactForm from "@/components/ContactForm";
 
@@ -18,7 +26,7 @@ export default function ContactPage() {
             subtitle="WE ARE ALWAYS READY TO HELP YOU BECOME OUTSTANDING! CONTACT US AND LET'S GET STARTED ON THE JOURNEY TO GREATNESS."
           />
 
-          <div className="flex flex-col gap-8 p-8 md:p-[40px] xl:p-[48px] bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <div className="flex flex-col gap-8 p-8 md:p-[40px] xl:p-[48px] bg-white/[0.02] backdrop-blur-sm border border-white/[0.06] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
             <div className="flex flex-col gap-2 relative">
               <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-[3px] h-[60%] bg-[#A855F7] rounded-r-full shadow-[0_0_12px_rgba(168,85,247,0.8)]" />
               <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">PHONE</span>
@@ -31,8 +39,8 @@ export default function ContactPage() {
 
             <div className="flex flex-col gap-2">
               <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">EMAIL</span>
-              <a href="mailto:contact@queenspalmsi.com" className="font-grotesk text-[14px] sm:text-[17px] md:text-[18px] xl:text-[22px] font-bold text-[#F5F5F0] hover:text-[#A855F7] transition-colors break-all">
-                CONTACT@QUEENSPALMSI.COM
+              <a href="mailto:queenspalmsi@gmail.com" className="font-grotesk text-[14px] sm:text-[17px] md:text-[18px] xl:text-[22px] font-bold text-[#F5F5F0] hover:text-[#A855F7] transition-colors break-all">
+                queenspalmsi@gmail.com
               </a>
             </div>
 
@@ -50,7 +58,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right side: Form */}
-        <div className="flex flex-col w-full lg:w-1/2 min-w-0 bg-[#0A0A0A]/70 backdrop-blur-2xl border border-white/[0.06] rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] p-8 md:p-[56px] relative overflow-hidden">
+        <div className="flex flex-col w-full lg:w-1/2 min-w-0 bg-[#0A0A0A]/70 backdrop-blur-sm border border-white/[0.06] rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] p-8 md:p-[56px] relative overflow-hidden">
           {/* Form inner glow */}
           <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#A855F7]/[0.03] blur-[80px] rounded-full pointer-events-none" />
           

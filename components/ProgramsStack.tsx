@@ -62,7 +62,7 @@ export default function ProgramsStack() {
             <div className="relative w-full h-full bg-[#070707] rounded-[1.5rem] overflow-hidden flex flex-col shadow-inner">
               
               {/* Top Status/Header bar */}
-              <div className="shrink-0 p-5 md:p-6 pb-4 border-b border-white/[0.06] flex items-center justify-between z-10 bg-[#070707]/90 backdrop-blur-md">
+              <div className="shrink-0 p-5 md:p-6 pb-4 border-b border-white/[0.06] flex items-center justify-between z-10 bg-[#070707]/90 backdrop-blur-sm">
                 <span className="font-ibm-mono text-[9px] md:text-[10px] font-bold text-[#A855F7] tracking-[2px]">
                   0{(index % programs.length) + 1} // {prog.tag}
                 </span>

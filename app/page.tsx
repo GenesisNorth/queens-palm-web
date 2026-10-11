@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  description:
+    "QPSI empowers young people with essential soft skills — leadership, communication, emotional intelligence and more — for success in life and career.",
+};
+
 import HeroSlider from "@/components/HeroSlider";
 import CoverflowGallery from "@/components/CoverflowGallery";
 import AboutPreview from "@/components/AboutPreview";

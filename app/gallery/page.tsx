@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import Link from "next/link";
 
@@ -60,20 +61,18 @@ export default function GalleryPage() {
           {allImages.map((item, i) => (
             <div
               key={i}
-              className={`group relative w-full h-full bg-white/[0.02] backdrop-blur-lg overflow-hidden border border-white/[0.08] hover:border-[#A855F7] transition-all duration-500 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] ${item.className || ''}`}
+              className={`group relative w-full h-full bg-white/[0.02] backdrop-blur-sm overflow-hidden border border-white/[0.08] hover:border-[#A855F7] transition-all duration-500 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] ${item.className || ''}`}
             >
               <div className="absolute inset-0 opacity-10 flex items-center justify-center font-ibm-mono text-[#A855F7] text-center p-4">
                 [IMAGE PLACEHOLDER]
               </div>
               
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={item.src}
                 alt={item.alt}
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-700 ease-out"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.opacity = '0';
-                }}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-700 ease-out"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#A855F7]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">

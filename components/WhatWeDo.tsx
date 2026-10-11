@@ -38,8 +38,9 @@ export default function WhatWeDo() {
           <div className="relative w-full max-w-[520px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(168,85,247,0.15)]">
             <Image
               src="/images/_DSC0084.jpg"
-              alt="What we do"
+              alt="QPSI facilitators running a workshop session"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
             {/* Soft gradient overlay */}
@@ -58,7 +59,7 @@ export default function WhatWeDo() {
             <div className="relative w-full h-full bg-[#070707] rounded-[1.5rem] overflow-hidden flex flex-col shadow-inner">
               
               {/* Top Status/Header bar */}
-              <div className="shrink-0 p-8 pb-4 border-b border-white/[0.06] flex items-center justify-between z-10 bg-[#070707]/90 backdrop-blur-md">
+              <div className="shrink-0 p-8 pb-4 border-b border-white/[0.06] flex items-center justify-between z-10 bg-[#070707]/90 backdrop-blur-sm">
                 <span className="font-ibm-mono text-[9px] font-bold text-[#A855F7] tracking-[2px]">
                   OUR CORE PILLARS
                 </span>
@@ -93,7 +94,7 @@ export default function WhatWeDo() {
               
               {/* Bottom Fade Gradient & Scroll Indicator */}
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#070707] via-[#070707]/80 to-transparent pointer-events-none z-10 flex items-end justify-center pb-6">
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10 animate-bounce shadow-lg">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/10 animate-bounce shadow-lg">
                   <span className="font-ibm-mono text-[9px] font-bold text-white tracking-[1.5px]">SCROLL</span>
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#A855F7]">
                     <path d="M12 5v14M19 12l-7 7-7-7"/>

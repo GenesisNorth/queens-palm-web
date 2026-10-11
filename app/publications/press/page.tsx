@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Press & Media",
+  description:
+    "Newspaper publications and press mentions covering QPSI's conferences and work empowering young women.",
+};
+
 import Link from "next/link";
 import GlitchText from "@/components/GlitchText";
 
@@ -46,7 +54,7 @@ export default function PressPage() {
               href={press.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 md:p-8 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] hover:bg-white/[0.05] group transition-colors"
+              className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 md:p-8 bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#A855F7] hover:bg-white/[0.05] group transition-colors"
             >
               <div className="flex flex-col gap-2">
                 <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px] uppercase">

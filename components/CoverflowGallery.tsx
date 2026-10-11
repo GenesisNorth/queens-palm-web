@@ -34,6 +34,7 @@ export default function CoverflowGallery() {
   const spinRef = useRef(0);          // ring rotation, radians
   const bloomRef = useRef(0);         // 0 = tight ring, 1 = hovered / bloomed
   const liftRef = useRef<number[]>(images.map(() => 0)); // per-card zoom, eased
+  const lastStyle = useRef(images.map(() => ({ o: "", z: "", f: "" })));
   const hoverRef = useRef<number | null>(null);
   const [front, setFront] = useState(0);
 
@@ -145,11 +146,22 @@ export default function CoverflowGallery() {
         el.style.transform =
           `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, ${z.toFixed(1)}px) ` +
           `rotateZ(${tilt.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
+        // Quantise the slow-changing properties and only write them when they
+        // actually change — a fresh filter/opacity value every frame forces a
+        // full re-rasterize of each photo.
         const ringOpacity = 0.4 + 0.6 * ((depth + 1) / 2);
-        el.style.opacity = (ringOpacity + (1 - ringOpacity) * L).toFixed(3);
-        el.style.zIndex = String(Math.round(400 + depth * 100 + L * 300));
-        const blur = depth < -0.2 ? (-depth - 0.2) * 2.4 * (1 - L) : 0;
-        el.style.filter = blur > 0.05 ? `blur(${blur.toFixed(1)}px)` : "none";
+        const prev = lastStyle.current[i];
+
+        const o = (ringOpacity + (1 - ringOpacity) * L).toFixed(2);
+        if (o !== prev.o) { el.style.opacity = o; prev.o = o; }
+
+        const zi = String(Math.round(400 + depth * 100 + L * 300));
+        if (zi !== prev.z) { el.style.zIndex = zi; prev.z = zi; }
+
+        // Snap blur to 1px steps so it changes a handful of times per rotation
+        const rawBlur = depth < -0.2 ? (-depth - 0.2) * 2.4 * (1 - L) : 0;
+        const f = rawBlur > 0.5 ? `blur(${Math.round(rawBlur)}px)` : "none";
+        if (f !== prev.f) { el.style.filter = f; prev.f = f; }
       }
 
       // While a photo is zoomed, lift the whole ring above the centre copy and
@@ -239,6 +251,7 @@ export default function CoverflowGallery() {
                   src={img.src}
                   alt={`QPSI — ${img.label.toLowerCase()}`}
                   fill
+                  sizes="(max-width: 640px) 45vw, 560px"
                   className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </div>

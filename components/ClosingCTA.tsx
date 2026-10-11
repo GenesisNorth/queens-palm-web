@@ -39,7 +39,7 @@ export default function ClosingCTA() {
         
         <a
           href="/contact"
-          className="group flex items-center justify-center w-full sm:w-[240px] h-[64px] rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/[0.1] hover:bg-white/[0.08] hover:border-[#A855F7]/50 transition-all duration-300 hover:scale-105"
+          className="group flex items-center justify-center w-full sm:w-[240px] h-[64px] rounded-full bg-white/[0.03] backdrop-blur-sm border border-white/[0.1] hover:bg-white/[0.08] hover:border-[#A855F7]/50 transition-all duration-300 hover:scale-105"
         >
           <span className="font-ibm-mono text-[13px] text-[#CCCCCC] group-hover:text-white tracking-[2px] transition-colors">
             CONTACT PAGE

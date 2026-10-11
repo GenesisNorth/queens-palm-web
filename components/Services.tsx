@@ -96,13 +96,13 @@ export default function Services() {
         >
           {/* Main Backplate Frame */}
           <div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 w-full p-4 md:p-6 lg:p-8 rounded-[2.5rem] bg-[#0A0A0A]/40 backdrop-blur-xl border border-white/[0.06] shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 w-full p-4 md:p-6 lg:p-8 rounded-[2.5rem] bg-[#0A0A0A]/40 backdrop-blur-sm border border-white/[0.06] shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
             style={{ transform: "translateZ(30px)" }} // Pops the grid slightly off the back plane
           >
             {services.map((s, i) => (
               <div
                 key={s.tag}
-                className={`group relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[340px] overflow-hidden rounded-[2rem] bg-white/[0.03] backdrop-blur-md border border-white/[0.06] transition-all duration-500 hover:border-[#A855F7]/40 hover:bg-white/[0.06] cursor-default ${s.colSpan}`}
+                className={`group relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[340px] overflow-hidden rounded-[2rem] bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] transition-all duration-500 hover:border-[#A855F7]/40 hover:bg-white/[0.06] cursor-default ${s.colSpan}`}
                 style={{ transform: "translateZ(60px)" }} // Huge pop out for extreme 3D depth
               >
                 {/* Soft Hover Glow Effect */}

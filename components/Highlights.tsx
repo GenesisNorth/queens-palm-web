@@ -156,6 +156,7 @@ function HighlightRow({ h, i, isActive, onMouseEnter }: any) {
                   src={h.image} 
                   alt={h.title} 
                   fill
+                  sizes="(max-width: 768px) 100vw, 45vw"
                   className="object-cover opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

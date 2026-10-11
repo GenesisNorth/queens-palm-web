@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Five years of transformative impact. Learn how Queens Palm Support Initiative empowers young people with the soft skills that shape life and career.",
+};
+
 import SectionHeader from "@/components/SectionHeader";
 import Gallery from "@/components/Gallery";
 import TeamGrid from "@/components/TeamGrid";
@@ -45,7 +53,7 @@ export default function AboutPage() {
           subtitle="5+ YEARS OF TRANSFORMATIVE IMPACT — TREMENDOUS IMPACT AND PROGRESS SO FAR."
         />
 
-        <div className="flex flex-col gap-6 p-8 md:p-[48px] bg-white/[0.02] backdrop-blur-xl border border-white/[0.08] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.3)] w-full max-w-[900px] relative overflow-hidden">
+        <div className="flex flex-col gap-6 p-8 md:p-[48px] bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.3)] w-full max-w-[900px] relative overflow-hidden">
           <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-[#A855F7]/10 blur-[80px] rounded-full pointer-events-none" />
           <p className="font-ibm-mono text-[13px] md:text-[15px] text-[#CCCCCC] tracking-[0.5px] leading-[1.8] relative z-10">
             At QPSI, we're deeply committed to the values enshrined in the United Nations
@@ -67,7 +75,7 @@ export default function AboutPage() {
               CHANGE IN THE WORLD.
             </h3>
           </div>
-          <div className="flex flex-col gap-5 p-8 md:p-[48px] bg-[#0A0A0A]/80 backdrop-blur-xl border border-white/[0.08] rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.5)] w-full md:flex-1 md:min-w-0 group hover:border-[#A855F7]/40 transition-colors duration-500">
+          <div className="flex flex-col gap-5 p-8 md:p-[48px] bg-[#0A0A0A]/80 backdrop-blur-sm border border-white/[0.08] rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.5)] w-full md:flex-1 md:min-w-0 group hover:border-[#A855F7]/40 transition-colors duration-500">
             <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px]">
               OUR MISSION
             </span>

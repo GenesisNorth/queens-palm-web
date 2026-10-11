@@ -130,7 +130,7 @@ export default function Testimonials() {
                 className="group relative w-[230px] xl:w-[300px] shrink-0 origin-bottom cursor-pointer outline-none transition-[transform,opacity] duration-500 ease-out will-change-transform motion-reduce:transition-none focus-visible:ring-2 focus-visible:ring-[#A855F7]"
                 style={s}
               >
-                <div className="flex flex-col h-full min-h-[470px] xl:min-h-[520px] p-7 xl:p-8 rounded-[14px] bg-white/[0.035] backdrop-blur-xl border border-white/[0.1] group-hover:border-[#A855F7] group-focus-visible:border-[#A855F7] shadow-[0_18px_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_44px_rgba(168,85,247,0.35)] transition-[border-color,box-shadow] duration-500">
+                <div className="flex flex-col h-full min-h-[470px] xl:min-h-[520px] p-7 xl:p-8 rounded-[14px] bg-white/[0.035] backdrop-blur-sm border border-white/[0.1] group-hover:border-[#A855F7] group-focus-visible:border-[#A855F7] shadow-[0_18px_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_44px_rgba(168,85,247,0.35)] transition-[border-color,box-shadow] duration-500">
                   {/* Eyebrow */}
                   <div className="flex items-baseline gap-2 pb-3 border-b border-white/[0.09]">
                     <span className="font-ibm-mono text-[9px] font-bold text-[#A855F7] tracking-[1.5px]">
@@ -184,7 +184,7 @@ export default function Testimonials() {
             <article
               key={t.name}
               aria-label={`Testimonial from ${t.name}`}
-              className="snap-center shrink-0 w-[84vw] max-w-[380px] flex flex-col p-6 sm:p-7 rounded-[14px] bg-white/[0.035] backdrop-blur-xl border border-white/[0.1] shadow-[0_14px_40px_rgba(0,0,0,0.45)]"
+              className="snap-center shrink-0 w-[84vw] max-w-[380px] flex flex-col p-6 sm:p-7 rounded-[14px] bg-white/[0.035] backdrop-blur-sm border border-white/[0.1] shadow-[0_14px_40px_rgba(0,0,0,0.45)]"
             >
               <div className="flex items-baseline gap-2 pb-3 border-b border-white/[0.09]">
                 <span className="font-ibm-mono text-[9px] font-bold text-[#A855F7] tracking-[1.5px]">

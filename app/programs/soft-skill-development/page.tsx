@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Soft Skill Development",
+  description:
+    "Sharpen communication, problem-solving, emotional intelligence and teamwork — the foundation of professional success.",
+};
+
 import ProgramDetailLayout from "@/components/ProgramDetailLayout";
 
 export default function SoftSkillDevelopmentPage() {
@@ -21,7 +29,7 @@ export default function SoftSkillDevelopmentPage() {
           intelligence, and the ability to collaborate effectively in diverse environments.
         </p>
         
-        <div className="flex flex-col gap-4 mt-4 p-6 bg-white/[0.02] backdrop-blur-lg border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border-l-4 border-l-[#A855F7]">
+        <div className="flex flex-col gap-4 mt-4 p-6 bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border-l-4 border-l-[#A855F7]">
           <h4 className="font-grotesk text-[18px] font-bold text-[#F5F5F0]">Key Skills Covered:</h4>
           <ul className="flex flex-col gap-3">
             <li className="flex gap-3">

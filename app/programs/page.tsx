@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Programs",
+  description:
+    "Explore QPSI training programs: leadership development, entrepreneurship training, soft skill development and mentorship.",
+};
+
 import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
 import Services from "@/components/Services";
