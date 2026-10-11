@@ -2,7 +2,7 @@ const stats = [
   { value: "10+", label: "ENGAGING MASTERCLASSES", border: true },
   { value: "5+", label: "IMPACTFUL CONFERENCES", border: true },
   { value: "2000+", label: "EMPOWERED PARTICIPANTS", border: true },
-  { value: "2+", label: "YEARS OF IMPACT", border: false },
+  { value: "3+", label: "YEARS OF IMPACT", border: false },
 ];
 
 export default function Stats() {

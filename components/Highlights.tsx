@@ -139,7 +139,7 @@ function HighlightRow({ h, i, isActive, onMouseEnter }: any) {
           }`}
         >
           <div 
-            className="w-full max-w-[320px] aspect-[4/3] [perspective:1000px] pointer-events-none"
+            className="w-full max-w-[320px] aspect-square [perspective:1000px] pointer-events-none"
           >
             <div 
               className="w-full h-full relative rounded-2xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.5)] border border-white/10 bg-[#0a0a0a] transition-transform duration-200 ease-out will-change-transform"
@@ -148,18 +148,30 @@ function HighlightRow({ h, i, isActive, onMouseEnter }: any) {
                 transformStyle: "preserve-3d"
               }}
             >
-              <div 
+              <div
                 className="absolute inset-0 w-full h-full"
-                style={{ transform: "translateZ(20px)" }} // Pops image slightly
+                // translateZ pops the image forward; the counter-scale undoes the
+                // perspective magnification that would otherwise clip its edges.
+                style={{ transform: "translateZ(20px) scale(0.98)" }}
               >
-                <Image 
-                  src={h.image} 
-                  alt={h.title} 
+                {/* Blurred fill so the card never shows empty letterbox bars */}
+                <Image
+                  src={h.image}
+                  alt=""
+                  aria-hidden="true"
                   fill
-                  sizes="(max-width: 768px) 100vw, 45vw"
-                  className="object-cover opacity-90"
+                  sizes="320px"
+                  className="object-cover scale-110 blur-2xl opacity-40"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                {/* The photo itself, uncropped */}
+                <Image
+                  src={h.image}
+                  alt={h.title}
+                  fill
+                  sizes="320px"
+                  className="object-contain"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
               </div>
             </div>
           </div>

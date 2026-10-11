@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -48,11 +49,15 @@ export default function Header() {
           {/* Main Nav Bar */}
           <div className="flex items-center justify-between h-[64px] px-6 md:px-8 shrink-0">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-[10px] shrink-0 group">
-              <span className="w-[10px] h-[10px] bg-[#A855F7] group-hover:scale-110 transition-transform rounded-sm" />
-              <span className="font-grotesk text-[13px] font-bold text-[#F5F5F0] tracking-[2.5px]">
-                QPSI
-              </span>
+            <Link href="/" className="flex items-center shrink-0 group" aria-label="Queens Palm Support Initiative — home">
+              <Image
+                src="/images/logo-qpsi-light.png"
+                alt="Queens Palm Support Initiative"
+                width={320}
+                height={91}
+                priority
+                className="h-[32px] md:h-[38px] w-auto group-hover:opacity-90 transition-opacity"
+              />
             </Link>
 
             {/* Desktop nav */}

@@ -16,6 +16,10 @@ const images = [
   { src: "/images/_DSC0186.jpg", className: "md:col-span-1 md:row-span-1", alt: "Student Engagement" },
   { src: "/images/_DSC0051.jpg", className: "md:col-span-2 md:row-span-2", alt: "Leadership" },
   { src: "/images/_DSC0184.jpg", className: "md:col-span-1 md:row-span-1", alt: "Awards Ceremony" },
+  { src: "/images/qpsi-school-outreach-group.jpg", className: "md:col-span-2 md:row-span-1", alt: "Secondary school students at a QPSI outreach session" },
+  { src: "/images/qpsi-speaker-banner-portrait.jpg", className: "md:col-span-1 md:row-span-2", alt: "Speaker celebrating beside the QPSI banner" },
+  { src: "/images/qpsi-conference-group-photo.jpg", className: "md:col-span-2 md:row-span-1", alt: "Attendees at a QPSI women's conference" },
+  { src: "/images/qpsi-book-presentation.jpg", className: "md:col-span-1 md:row-span-1", alt: "Students receiving books at a QPSI presentation" },
 ];
 
 export default function Gallery() {

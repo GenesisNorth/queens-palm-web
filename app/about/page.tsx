@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Five years of transformative impact. Learn how Queens Palm Support Initiative empowers young people with the soft skills that shape life and career.",
+    "Three years of transformative impact. Learn how Queens Palm Support Initiative empowers young people with the soft skills that shape life and career.",
 };
 
 import SectionHeader from "@/components/SectionHeader";
@@ -50,7 +50,7 @@ export default function AboutPage() {
         <SectionHeader
           label="ABOUT US"
           title={"SHARE THE JOY OF\nACHIEVING GLORIOUS\nMOMENTS."}
-          subtitle="5+ YEARS OF TRANSFORMATIVE IMPACT — TREMENDOUS IMPACT AND PROGRESS SO FAR."
+          subtitle="3+ YEARS OF TRANSFORMATIVE IMPACT — TREMENDOUS IMPACT AND PROGRESS SO FAR."
         />
 
         <div className="flex flex-col gap-6 p-8 md:p-[48px] bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.3)] w-full max-w-[900px] relative overflow-hidden">

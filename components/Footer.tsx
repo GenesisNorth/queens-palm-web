@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const programLinks = [
@@ -47,12 +48,15 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-6 lg:w-[200px] xl:w-[240px] lg:shrink-0 relative z-10">
-            <div className="flex items-center gap-[12px]">
-              <div className="w-[32px] h-[32px] bg-gradient-to-br from-[#A855F7] to-[#7C3AED] rounded-lg shrink-0 shadow-[0_0_20px_rgba(168,85,247,0.4)]" />
-              <span className="font-grotesk text-[18px] font-bold text-[#F5F5F0] tracking-[3px]">
-                QPSI
-              </span>
-            </div>
+            <Link href="/" className="flex items-center group" aria-label="Queens Palm Support Initiative — home">
+              <Image
+                src="/images/logo-qpsi-light.png"
+                alt="Queens Palm Support Initiative"
+                width={320}
+                height={91}
+                className="h-[42px] w-auto group-hover:opacity-90 transition-opacity"
+              />
+            </Link>
             <p className="font-ibm-mono text-[11px] text-[#888888] tracking-[1px] leading-[1.7] max-w-[260px]">
               EMPOWERING YOUNG PEOPLE WITH ESSENTIAL SOFT SKILLS THAT ARE TIMELESS
               AND INVALUABLE FOR SUCCESS IN LIFE AND CAREER.

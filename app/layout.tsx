@@ -41,12 +41,21 @@ export const metadata: Metadata = {
     siteName: "Queens Palm Support Initiative",
     locale: "en_NG",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Queens Palm Support Initiative",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Queens Palm Support Initiative",
     description:
       "Empowering young individuals with essential soft skills for success in life and career.",
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
 };

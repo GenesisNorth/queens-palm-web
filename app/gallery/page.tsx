@@ -45,6 +45,19 @@ const allImages = [
   { src: "/images/_DSC0109.jpg", className: "md:col-span-1 md:row-span-1", alt: "Event Banner" },
   { src: "/images/_DSC0147.jpg", className: "md:col-span-2 md:row-span-2", alt: "Engaging Speaker" },
   { src: "/images/_DSC0172.jpg", className: "md:col-span-1 md:row-span-1", alt: "Speaker" },
+
+  // October 2026 — school outreach, women's conference & book presentation
+  { src: "/images/qpsi-conference-group-photo.jpg", className: "md:col-span-2 md:row-span-2", alt: "Attendees gathered for a group photo at a QPSI women's conference" },
+  { src: "/images/qpsi-speaker-banner-portrait.jpg", className: "md:col-span-1 md:row-span-2", alt: "Speaker celebrating beside the QPSI banner" },
+  { src: "/images/qpsi-school-outreach-group.jpg", className: "md:col-span-2 md:row-span-1", alt: "Secondary school students at a QPSI outreach session" },
+  { src: "/images/qpsi-guest-speakers.jpg", className: "md:col-span-1 md:row-span-1", alt: "Guest speakers beside the QPSI banner" },
+  { src: "/images/qpsi-facilitator-banner.jpg", className: "md:col-span-1 md:row-span-2", alt: "QPSI facilitator at a training session" },
+  { src: "/images/qpsi-womens-conference-group.jpg", className: "md:col-span-2 md:row-span-1", alt: "Participants at a QPSI women's conference" },
+  { src: "/images/qpsi-book-presentation.jpg", className: "md:col-span-1 md:row-span-1", alt: "Students receiving books at a QPSI presentation" },
+  { src: "/images/qpsi-team-member-banner.jpg", className: "md:col-span-1 md:row-span-2", alt: "QPSI team member at an outreach event" },
+  { src: "/images/qpsi-outreach-session.jpg", className: "md:col-span-2 md:row-span-1", alt: "QPSI outreach session in progress" },
+  { src: "/images/qpsi-conference-session.jpg", className: "md:col-span-1 md:row-span-1", alt: "Conference session hosted by QPSI" },
+  { src: "/images/qpsi-event-audience.jpg", className: "md:col-span-1 md:row-span-1", alt: "Audience at a QPSI event" },
 ];
 
 export default function GalleryPage() {
