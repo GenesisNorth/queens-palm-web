@@ -115,16 +115,14 @@ export default function AboutPage() {
           BRIGHT FUTURE THAT WE CHERISH. WE THRIVE FOR SUCCESS.
         </h2>
         
-        <a
-          href={JOIN_FORM}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/register"
           className="group relative flex items-center justify-center w-full sm:w-[240px] h-[64px] rounded-full bg-[#F5F5F0] hover:bg-white transition-all duration-300 shadow-[0_0_40px_rgba(245,245,240,0.1)] hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] hover:scale-105"
         >
           <span className="font-grotesk text-[14px] font-bold text-[#0A0A0A] tracking-[2px]">
-            JOIN US
+            REGISTER
           </span>
-        </a>
+        </Link>
       </section>
       
     </main>

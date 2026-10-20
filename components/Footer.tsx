@@ -13,6 +13,7 @@ const programLinks = [
 ];
 
 const exploreLinks = [
+  { label: "Event Registration", href: "/register" },
   { label: "Networking Strategies", href: "/programs" },
   { label: "Soft Skills", href: "/programs/soft-skill-development" },
   { label: "Mentorship Opportunities", href: "/programs/mentorship" },

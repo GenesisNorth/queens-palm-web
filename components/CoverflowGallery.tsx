@@ -4,16 +4,18 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const images = [
-  { src: "/images/_DSC0034.jpg", label: "OUTREACH" },
-  { src: "/images/_DSC0044.jpg", label: "MASTERCLASS" },
+  { src: "/images/gen.jpg", label: "EXCELLENCE" },
+  { src: "/images/0fba7acf-a79e-4691-9cd9-f48bf3ab9988.jpg", label: "ANNIVERSARY" },
+  { src: "/images/4d991eac-7ef3-49e5-806a-3d4cefd4eaed.jpg", label: "LAUNCH" },
   { src: "/images/_DSC0050.jpg", label: "CONFERENCE" },
+  { src: "/images/647045ef-6e3c-4905-b9f0-b5b691e4244c.jpg", label: "LEADERSHIP" },
   { src: "/images/_DSC0057.jpg", label: "MENTORSHIP" },
-  { src: "/images/_DSC0060.jpg", label: "COMMUNITY" },
+  { src: "/images/b16b03fb-8253-48b1-a2af-52c84f9f99df.jpg", label: "COMMUNITY" },
   { src: "/images/_DSC0084.jpg", label: "WORKSHOP" },
+  { src: "/images/51229cc8-3eb0-4233-b174-99d4c95cf98e.jpg", label: "FOUNDATION" },
+  { src: "/images/e259540e-025d-4a36-a430-2a2b8e86d5d6.jpg", label: "SPEAKERS" },
   { src: "/images/_DSC0087.jpg", label: "TEAM" },
-  { src: "/images/_DSC0094.jpg", label: "LEADERSHIP" },
   { src: "/images/_DSC0095.jpg", label: "IMPACT" },
-  { src: "/images/_DSC0098.jpg", label: "GROWTH" },
 ];
 
 /** Perspective depth of the stage; kept in JS so the maths and CSS cannot drift. */
@@ -251,7 +253,8 @@ export default function CoverflowGallery() {
                   src={img.src}
                   alt={`QPSI — ${img.label.toLowerCase()}`}
                   fill
-                  sizes="(max-width: 640px) 45vw, 560px"
+                  sizes="(max-width: 640px) 150px, 210px"
+                  priority={i === 0}
                   className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </div>

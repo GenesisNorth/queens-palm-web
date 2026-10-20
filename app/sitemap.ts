@@ -14,6 +14,7 @@ const routes = [
   { path: "/publications/10-soft-skills-2025", priority: 0.6 },
   { path: "/publications/press", priority: 0.5 },
   { path: "/gallery", priority: 0.5 },
+  { path: "/register", priority: 0.9 },
   { path: "/contact", priority: 0.7 },
 ];
 

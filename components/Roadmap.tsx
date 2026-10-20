@@ -6,6 +6,13 @@ import { useEffect, useRef, useState } from "react";
 import SectionHeader from "./SectionHeader";
 
 const allImages = [
+  "/images/gen.jpg",
+  "/images/0fba7acf-a79e-4691-9cd9-f48bf3ab9988.jpg",
+  "/images/647045ef-6e3c-4905-b9f0-b5b691e4244c.jpg",
+  "/images/4d991eac-7ef3-49e5-806a-3d4cefd4eaed.jpg",
+  "/images/b16b03fb-8253-48b1-a2af-52c84f9f99df.jpg",
+  "/images/51229cc8-3eb0-4233-b174-99d4c95cf98e.jpg",
+  "/images/e259540e-025d-4a36-a430-2a2b8e86d5d6.jpg",
   "/images/_DSC0086.jpg", "/images/_DSC0097.jpg", "/images/_DSC0128.jpg",
   "/images/_DSC0168.jpg", "/images/_DSC0077.jpg", "/images/_DSC0138.jpg",
   "/images/_DSC0194.jpg", "/images/_DSC0046.jpg", "/images/_DSC0186.jpg",

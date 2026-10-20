@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const JOIN_FORM = "https://forms.gle/fVccqtCVDxbuGPGw6";
-
 const links = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
@@ -93,14 +91,12 @@ export default function Header() {
 
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center">
-              <a
-                href={JOIN_FORM}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/register"
                 className="font-grotesk text-[11px] font-bold text-white bg-[#A855F7] tracking-[1.5px] px-[20px] py-[10px] rounded-full hover:bg-[#9333EA] hover:shadow-[0_0_16px_rgba(168,85,247,0.4)] transition-all"
               >
-                JOIN QPSI
-              </a>
+                REGISTER
+              </Link>
             </div>
 
             {/* Mobile burger */}
@@ -158,14 +154,12 @@ export default function Header() {
                 );
               })}
               <div className="flex flex-col pt-4 pb-2">
-                <a
-                  href={JOIN_FORM}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/register"
                   className="font-grotesk text-[11px] font-bold text-white bg-[#A855F7] tracking-[1.5px] px-[18px] py-[12px] text-center rounded-full hover:bg-[#9333EA] transition-colors"
                 >
-                  JOIN QPSI
-                </a>
+                  REGISTER
+                </Link>
               </div>
             </nav>
           </div>

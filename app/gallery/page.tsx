@@ -5,6 +5,16 @@ import SectionHeader from "@/components/SectionHeader";
 import Link from "next/link";
 
 const allImages = [
+  // Newly Added Milestones & Special Events
+  { src: "/images/gen.jpg", className: "md:col-span-2 md:row-span-2", alt: "QPSI Executive & Leadership Team" },
+  { src: "/images/0fba7acf-a79e-4691-9cd9-f48bf3ab9988.jpg", className: "md:col-span-2 md:row-span-1", alt: "QPSI Anniversary Celebration & Award Presentation" },
+  { src: "/images/647045ef-6e3c-4905-b9f0-b5b691e4244c.jpg", className: "md:col-span-1 md:row-span-2", alt: "Youth Empowerment & Ambassadors" },
+  { src: "/images/4d991eac-7ef3-49e5-806a-3d4cefd4eaed.jpg", className: "md:col-span-2 md:row-span-1", alt: "Flagship Launch Women Leaders" },
+  { src: "/images/51229cc8-3eb0-4233-b174-99d4c95cf98e.jpg", className: "md:col-span-1 md:row-span-1", alt: "Founders & Leadership Panel" },
+  { src: "/images/b16b03fb-8253-48b1-a2af-52c84f9f99df.jpg", className: "md:col-span-2 md:row-span-1", alt: "Community Gathering on Stage" },
+  { src: "/images/e259540e-025d-4a36-a430-2a2b8e86d5d6.jpg", className: "md:col-span-1 md:row-span-2", alt: "Distinguished Event Speakers" },
+  { src: "/images/qpsi-anniversary.jpg", className: "md:col-span-1 md:row-span-2", alt: "3rd Anniversary Official Anticipation Banner" },
+
   // Rows 1-5 (from homepage)
   { src: "/images/_DSC0086.jpg", className: "md:col-span-2 md:row-span-2", alt: "QPSI Volunteers" },
   { src: "/images/_DSC0097.jpg", className: "md:col-span-1 md:row-span-1", alt: "QPSI Products" },

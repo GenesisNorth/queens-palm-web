@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-
-const JOIN_FORM = "https://forms.gle/fVccqtCVDxbuGPGw6";
+import Link from "next/link";
 
 const slides = [
   {
@@ -10,7 +9,7 @@ const slides = [
     heading: "QUEENS PALM\nSUPPORT INITIATIVE",
     subheading:
       "EMPOWERING YOUNG INDIVIDUALS WITH ESSENTIAL SOFT SKILLS THAT ARE TIMELESS AND INVALUABLE FOR SUCCESS IN LIFE AND CAREER.",
-    cta: { label: "GET STARTED", href: JOIN_FORM },
+    cta: { label: "REGISTER NOW", href: "/register" },
   },
   {
     eyebrow: "",
@@ -83,17 +82,15 @@ export default function HeroSlider() {
         {/* Modern Glass Buttons (CTA) */}
         {slide.cta && (
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 w-full pt-8">
-            <a
+            <Link
               href={slide.cta.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group relative flex items-center justify-center w-full sm:w-[240px] h-[60px] rounded-full bg-[#F5F5F0] hover:bg-white transition-all duration-300 shadow-[0_0_40px_rgba(245,245,240,0.2)] hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] hover:scale-105"
             >
               <span className="font-grotesk text-[13px] font-bold text-[#050505] tracking-[2px]">
                 {slide.cta.label}
               </span>
               <div className="absolute inset-0 rounded-full border border-black/10 pointer-events-none" />
-            </a>
+            </Link>
             
             <a
               href="/about"

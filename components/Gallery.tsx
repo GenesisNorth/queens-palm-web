@@ -4,22 +4,27 @@ import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 
 const images = [
-  // Rows 1-5
+  // Newly Added Highlights & Milestones
+  { src: "/images/gen.jpg", className: "md:col-span-2 md:row-span-2", alt: "QPSI Executive & Leadership Team" },
+  { src: "/images/0fba7acf-a79e-4691-9cd9-f48bf3ab9988.jpg", className: "md:col-span-2 md:row-span-1", alt: "Anniversary Celebration & Awards" },
+  { src: "/images/647045ef-6e3c-4905-b9f0-b5b691e4244c.jpg", className: "md:col-span-1 md:row-span-2", alt: "Youth Empowerment & Leadership" },
+  { src: "/images/4d991eac-7ef3-49e5-806a-3d4cefd4eaed.jpg", className: "md:col-span-2 md:row-span-1", alt: "Flagship Launch Women Leaders" },
+  { src: "/images/51229cc8-3eb0-4233-b174-99d4c95cf98e.jpg", className: "md:col-span-1 md:row-span-1", alt: "Founders & Leadership Panel" },
+  { src: "/images/b16b03fb-8253-48b1-a2af-52c84f9f99df.jpg", className: "md:col-span-2 md:row-span-1", alt: "Community Gathering on Stage" },
+  { src: "/images/e259540e-025d-4a36-a430-2a2b8e86d5d6.jpg", className: "md:col-span-1 md:row-span-2", alt: "Distinguished Event Speakers" },
+  { src: "/images/qpsi-anniversary.jpg", className: "md:col-span-1 md:row-span-2", alt: "3rd Anniversary Anticipate" },
+
+  // Foundation & Community Moments
   { src: "/images/_DSC0086.jpg", className: "md:col-span-2 md:row-span-2", alt: "QPSI Volunteers" },
   { src: "/images/_DSC0097.jpg", className: "md:col-span-1 md:row-span-1", alt: "QPSI Products" },
   { src: "/images/_DSC0128.jpg", className: "md:col-span-1 md:row-span-2", alt: "Stage Speaker" },
   { src: "/images/_DSC0169.jpg", className: "md:col-span-1 md:row-span-1", alt: "Outdoor Event" },
   { src: "/images/_DSC0077.jpg", className: "md:col-span-1 md:row-span-1", alt: "Team Photo" },
   { src: "/images/_DSC0138.jpg", className: "md:col-span-2 md:row-span-1", alt: "Audience" },
-  { src: "/images/_DSC0194.jpg", className: "md:col-span-1 md:row-span-1", alt: "Indoor Event" },
   { src: "/images/_DSC0046.jpg", className: "md:col-span-1 md:row-span-2", alt: "Mentorship" },
-  { src: "/images/_DSC0186.jpg", className: "md:col-span-1 md:row-span-1", alt: "Student Engagement" },
   { src: "/images/_DSC0051.jpg", className: "md:col-span-2 md:row-span-2", alt: "Leadership" },
-  { src: "/images/_DSC0184.jpg", className: "md:col-span-1 md:row-span-1", alt: "Awards Ceremony" },
   { src: "/images/qpsi-school-outreach-group.jpg", className: "md:col-span-2 md:row-span-1", alt: "Secondary school students at a QPSI outreach session" },
-  { src: "/images/qpsi-speaker-banner-portrait.jpg", className: "md:col-span-1 md:row-span-2", alt: "Speaker celebrating beside the QPSI banner" },
   { src: "/images/qpsi-conference-group-photo.jpg", className: "md:col-span-2 md:row-span-1", alt: "Attendees at a QPSI women's conference" },
-  { src: "/images/qpsi-book-presentation.jpg", className: "md:col-span-1 md:row-span-1", alt: "Students receiving books at a QPSI presentation" },
 ];
 
 export default function Gallery() {
