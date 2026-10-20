@@ -16,39 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-const eventPillars = [
-  {
-    tag: "01",
-    title: "Personal Development",
-    desc: "Unpack transformative frameworks for self-discovery, unshakeable confidence, and purposeful direction in life and career.",
-  },
-  {
-    tag: "02",
-    title: "Emotional Intelligence & Poise",
-    desc: "Cultivate self-awareness, emotional resilience, and interpersonal grace that commands respect in every room.",
-  },
-  {
-    tag: "03",
-    title: "High-Impact Communication",
-    desc: "Sharpen verbal, non-verbal, and active listening skills to articulate ideas with conviction and clarity.",
-  },
-  {
-    tag: "04",
-    title: "Leadership & Mentorship",
-    desc: "Direct access to accomplished mentors and industry trailblazers eager to guide and elevate the next generation.",
-  },
-  {
-    tag: "05",
-    title: "Financial Literacy & Strategy",
-    desc: "Essential financial knowledge and sustainable economic mindsets for young professionals and aspiring entrepreneurs.",
-  },
-  {
-    tag: "06",
-    title: "Community & Networking",
-    desc: "Connect with ambitious peers and positive change-makers who champion excellence and uplift one another.",
-  },
-];
-
 const faqs = [
   {
     q: "Who is eligible to attend the 3rd Anniversary Event?",
@@ -113,22 +80,6 @@ export default function RegisterPage() {
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
-
-              {/* Artwork Floating Card Tag */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-between">
-                <div className="flex flex-col">
-                  <span className="font-ibm-mono text-[10px] font-bold text-[#A855F7] tracking-[2px]">
-                    EVENT THEME
-                  </span>
-                  <span className="font-grotesk text-[17px] font-bold text-white tracking-[0.5px]">
-                    Reset · Revive · Renew
-                  </span>
-                </div>
-                <div className="px-3 py-1.5 rounded-full bg-[#A855F7]/20 border border-[#A855F7]/50 font-ibm-mono text-[10px] font-bold text-[#A855F7] tracking-[1.5px]">
-                  ANTICIPATE!
-                </div>
-              </div>
             </div>
 
             {/* Quick Highlights Card */}
@@ -175,40 +126,7 @@ export default function RegisterPage() {
         </div>
       </section>
 
-      {/* Pillars Section: What You Will Gain */}
-      <section className="flex flex-col w-full py-16 px-6 md:py-[100px] md:px-[120px] max-w-[1400px] mx-auto border-t border-white/[0.08]">
-        <SectionHeader
-          label="EVENT EXPERIENCE"
-          title={"WHAT TO EXPECT AT\nTHE 3RD ANNIVERSARY."}
-          subtitle="A CURATED EXPERIENCE DESIGNED TO EMPOWER AND ACCELERATE YOUR GROWTH."
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-12 md:mt-16">
-          {eventPillars.map((pillar) => (
-            <div
-              key={pillar.tag}
-              className="group relative flex flex-col p-8 rounded-[2rem] bg-white/[0.02] backdrop-blur-sm border border-white/[0.08] hover:border-[#A855F7]/50 hover:bg-white/[0.04] transition-all duration-500 shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]"
-            >
-              <div className="flex items-center justify-between mb-8">
-                <span className="font-ibm-mono text-[11px] font-bold text-[#A855F7] tracking-[2px] bg-[#A855F7]/10 px-3 py-1 rounded-full border border-[#A855F7]/20">
-                  PILLAR {pillar.tag}
-                </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-[#A855F7] transition-colors" />
-              </div>
-
-              <h3 className="font-grotesk text-[22px] md:text-[24px] font-bold text-[#F5F5F0] tracking-[-0.5px] leading-tight mb-3 group-hover:text-white transition-colors">
-                {pillar.title}
-              </h3>
-
-              <p className="font-ibm-mono text-[12px] md:text-[13px] text-[#888888] group-hover:text-[#BBBBBB] leading-[1.8] transition-colors">
-                {pillar.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Photo Highlights / Milestones Gallery (Showing New Images!) */}
+      {/* Photo Highlights / Milestones Gallery (Showing New Images Cleanly Without Text Overlays) */}
       <section className="flex flex-col w-full py-16 px-6 md:py-[100px] md:px-[120px] max-w-[1400px] mx-auto border-t border-white/[0.08]">
         <SectionHeader
           label="OUR JOURNEY SO FAR"
@@ -225,16 +143,8 @@ export default function RegisterPage() {
               alt="QPSI Executive & Leadership Team"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
-              <span className="font-ibm-mono text-[10px] font-bold text-[#A855F7] tracking-[2px]">
-                LEADERSHIP &amp; FOUNDATION
-              </span>
-              <h4 className="font-grotesk text-[20px] md:text-[26px] font-bold text-white tracking-[-0.5px] mt-1">
-                Executive Leadership &amp; Ambassadors
-              </h4>
-            </div>
           </div>
 
           {/* Card 2: 0fba7acf... Anniversary Cake */}
@@ -244,16 +154,8 @@ export default function RegisterPage() {
               alt="QPSI Anniversary Celebration & Award Plaque"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
-              <span className="font-ibm-mono text-[10px] font-bold text-[#A855F7] tracking-[2px]">
-                MILESTONE MOMENTS
-              </span>
-              <h4 className="font-grotesk text-[18px] font-bold text-white tracking-[-0.5px]">
-                Anniversary Cake &amp; Awards
-              </h4>
-            </div>
           </div>
 
           {/* Card 3: 4d991eac... Flagship Launch Women Leaders */}
@@ -263,16 +165,8 @@ export default function RegisterPage() {
               alt="Flagship Launch Women Leaders"
               fill
               sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-5">
-              <span className="font-ibm-mono text-[10px] font-bold text-[#A855F7] tracking-[1.5px]">
-                FLAGSHIP LAUNCH
-              </span>
-              <h4 className="font-grotesk text-[15px] font-bold text-white tracking-[-0.5px]">
-                Women Leaders On Stage
-              </h4>
-            </div>
           </div>
 
           {/* Card 4: 647045ef... Youth Celebration */}
@@ -282,16 +176,8 @@ export default function RegisterPage() {
               alt="Youth Empowerment & Community"
               fill
               sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-5">
-              <span className="font-ibm-mono text-[10px] font-bold text-[#A855F7] tracking-[1.5px]">
-                COMMUNITY
-              </span>
-              <h4 className="font-grotesk text-[15px] font-bold text-white tracking-[-0.5px]">
-                Youth In Action
-              </h4>
-            </div>
           </div>
 
         </div>
